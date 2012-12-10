@@ -5,7 +5,9 @@ ActiveAdmin.register About do
  
     index do 
      column :title
-     column :description
+     column :description do |about|
+       truncate(strip_tags(about.description), length: 800)  
+     end
 
      default_actions
    end
@@ -22,7 +24,7 @@ ActiveAdmin.register About do
          attributes_table do
            row :title
            row :description do
-             sanitize(about.description)
+             truncate(strip_tags(about.description), length: 800)  
            end
          end
        end

@@ -1,25 +1,32 @@
-<h1>Listing abouts</h1>
-
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Description</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @abouts.each do |about| %>
-  <tr>
-    <td><%= about.title %></td>
-    <td><%= about.description %></td>
-    <td><%= link_to 'Show', about %></td>
-    <td><%= link_to 'Edit', edit_about_path(about) %></td>
-    <td><%= link_to 'Destroy', about, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New About', new_about_path %>
+<div class="body clearfix">
+	<!-- left -->
+	<div class="body__left">
+		<div class="left__menu">
+			<h3 class="left__menu-title">О Компании "Полис"</h3>
+			<ul>
+				<% @abouts.each do |about| %>
+		      	<%= content_tag :li, :class => ('left__menu-selected' if @about == about) do %>
+				<%= link_to about.title, about %>
+				<% end %>
+		        <% end %>
+			</ul>
+			<h3 class="left__menu-title">Полезная информация</h3>
+			<ul>
+				<li><a href="#">Как записаться на прием?</a></li>
+				<li><a href="#">Что взять с собой на прием?</a></li>
+				<li><a href="#">Больно ли удалять файлы?</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- end left -->
+	<!-- data -->		
+	<div class="body__data">
+		<div class="text text__noline">
+			<h1 class="text__title"><%= @about.title %></h1>
+			<%= sanitize @about.description %>
+			
+		</div>
+		
+	</div>
+	<!-- end data -->
+</div>

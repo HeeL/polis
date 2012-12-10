@@ -1,15 +1,32 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Title:</b>
-  <%= @about.title %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @about.description %>
-</p>
-
-
-<%= link_to 'Edit', edit_about_path(@about) %> |
-<%= link_to 'Back', abouts_path %>
+<div class="body clearfix">
+	<!-- left -->
+	<div class="body__left">
+		<div class="left__menu">
+			<h3 class="left__menu-title">О Компании "Полис"</h3>
+			<ul>
+				<% @abouts.each do |about| %>
+		      		<%= content_tag :li, :class => ('left__menu-selected' if @about == about) do %>
+					<%= link_to about.title, about %>
+					<% end %>
+		        <% end %>
+			</ul>
+			<h3 class="left__menu-title">Полезная информация</h3>
+			<ul>
+				<li><a href="#">Как записаться на прием?</a></li>
+				<li><a href="#">Что взять с собой на прием?</a></li>
+				<li><a href="#">Больно ли удалять файлы?</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- end left -->
+	<!-- data -->		
+	<div class="body__data">
+		<div class="text text__noline">
+			<h1 class="text__title"><%= @about.title %></h1>
+			<%= sanitize @about.description %>
+			
+		</div>
+		
+	</div>
+	<!-- end data -->
+</div>
