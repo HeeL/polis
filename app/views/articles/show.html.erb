@@ -1,0 +1,26 @@
+<div class="body clearfix">
+		<!-- data left -->		
+		<div class="body__data-left">
+			<div class="newsdata">
+				<a name="top"></a>
+				<div class="clearfix"><%= link_to "Назад", 'javascript:history.back()' %></div>
+				<h2 class="newsdata__title"><%= @article.title %></h2>
+				<span class="newsdata__subtitle"><%= @article.date %> | <%= Office.where(:id => @article.office_id).first.title %></span>
+				<div class="newsdata__image"><%= image_tag(@article.photo.url) %></div>
+				<p><%= sanitize @article.description %></p>
+				<a href="#top" class="newsdata__top">Вверх</a>
+			</div>			
+		</div>
+		<!-- end data left-->
+		<!-- body right -->
+		<div class="body__right">	
+			<div class="othernews">
+				<h2 class="othernews__title"></h2>
+				<ul class="othernews__list">
+				<% @other.each do |article| %>
+					<li><span><%= article.date %> | <%= Office.where(:id => article.office_id).first.title %></span><%= link_to article.title, article %></li>
+				<% end %>
+				</ul>
+			</div>
+		</div>
+	</div>

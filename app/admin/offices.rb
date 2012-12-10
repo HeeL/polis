@@ -1,4 +1,7 @@
 ActiveAdmin.register Office do
+  config.batch_actions = false
+  config.clear_sidebar_sections!
+  config.sort_order = 'title_asc'
   
          index do 
           column :title

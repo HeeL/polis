@@ -5,6 +5,16 @@ gem 'activeadmin'
 gem 'paperclip'
 gem 'rails-i18n'
 gem "ckeditor", "3.7.3"
+gem 'will_paginate'
+
+gem 'capistrano'
+gem 'unicorn'
+gem 'execjs'
+gem 'therubyracer'
+
+group :production do  
+gem 'mysql2'
+end
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

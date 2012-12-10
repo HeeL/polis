@@ -1,4 +1,8 @@
 ru:
+  will_paginate:
+    previous_label: "&lt;"
+    next_label: "&gt;"
+    page_gap: "&hellip;"
   activerecord:
     models:
       doctor: "Врачи"
@@ -6,6 +10,7 @@ ru:
       article: "Новости"
       about: "О компании"
       service: "Услуги"
+      title: "Заголовок"
     attributes:
       doctor:
         name: "ФИО"
@@ -19,6 +24,17 @@ ru:
       service:
         title: "Заголовок"
         description: "Текст"
+      article:
+        title: "Заголовок"
+        photo: "Фото"
+        date: "Дата"
+        office: "Пункт"
+        description: "Текст"
+        office_id: "Отделение"
+        office: "Пункт"
+      office:
+        title: "Название"
+        adress: "Адрес"
   active_admin:
     dashboard: Dashboard
     dashboard_welcome:

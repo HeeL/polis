@@ -1,0 +1,45 @@
+<div class="body clearfix">
+	<!-- left -->
+	<div class="body__left">
+		<div class="left__news">
+			<div class="left__news-section">
+				<div class="left__news-item left__news-selected clearfix"><input type="radio" name="left__news-radio" class="left__news-radio"  id="radio1"/><label for="radio1">Показать все новости</label></div>
+			</div>
+			<div class="left__news-section clearfix">
+				<div class="left__news-item clearfix"><input type="radio" class="left__news-radio" name="left__news-radio"  id="radio2"/><label for="radio2">Только по отделениям:</label></div>
+				
+				
+					<% @offices.each do |office| %>
+						<div class="left__news-item clearfix">
+						<%= check_box_tag :office, '1', false, :class => 'left__news-check' %> 
+						<%= label_tag office.title %>
+						</div>
+					<% end %>	
+				
+			</div>
+		</div>
+	</div>
+	<!-- end left -->
+	<!-- data -->		
+	<div class="body__data">
+		<h1 class="news__title">новости компании полис</h1>
+		<ul class="news">
+			<% @articles.each do |article| %>
+			<li>
+				<div class="news__item-top">
+					<div class="news__item-image"><%= image_tag(article.photo.url) %></div>
+					<%= link_to article.title, article %>
+					<span><%= article.date %> | <%= Office.where(:id => article.office_id).first.title %></span>
+				</div>
+				<p><%= truncate(strip_tags(article.description), length: 600) %></p>
+				
+				<%= link_to "Читать полностью", article, :class => 'news__item-open' %>
+			</li>
+			<% end %>				
+		</ul>	
+		
+		<%= will_paginate @posts, :container => true, :class => 'flickr_pagination' %>
+			  
+	</div>
+	<!-- end data -->
+</div>
