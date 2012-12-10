@@ -1,0 +1,26 @@
+<div class="body clearfix">
+		<!-- left -->
+		<div class="body__left">
+			<div class="left__menu">
+				<h3 class="left__menu-title">Услуги компании «Полис»:</h3>
+				<ul>
+					<% @services.each do |service| %>
+			      	<%= content_tag :li, :class => ('left__menu-selected' if @service == service) do %>
+					<%= link_to service.title, service %>
+					<% end %>
+			        <% end %>
+				</ul>					
+			</div>
+		</div>
+		<!-- end left -->
+		<!-- data -->		
+		<div class="body__data">
+			<div class="text text__noline">
+				<h1 class="text__title"><%= @service.title %></h1>
+				<%= sanitize @service.description %>	
+			</div>
+
+			
+		</div>
+		<!-- end data -->
+	</div>

@@ -3,8 +3,9 @@ ru:
     models:
       doctor: "Врачи"
       office: "Отделения"
-      new: "Новости"
+      article: "Новости"
       about: "О компании"
+      service: "Услуги"
     attributes:
       doctor:
         name: "ФИО"
@@ -13,6 +14,9 @@ ru:
         office_id: "Отделение"
         office: "Пункт"
       about:
+        title: "Заголовок"
+        description: "Текст"
+      service:
         title: "Заголовок"
         description: "Текст"
   active_admin:

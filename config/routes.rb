@@ -1,17 +1,20 @@
 Polisoms::Application.routes.draw do
+  resources :services
+
+
   mount Ckeditor::Engine => '/ckeditor'
 
   resources :abouts
 
 
   resources :offices
-  resources :news
+
 
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   
-  root :to => 'news#index'
-  
+  root :to => 'offices#index'
 
+  resources :news
 end

@@ -6,9 +6,13 @@
 		<%= link_to "Полис", abouts_path %>
 		<% end %>
 		<li><a href="#">Адреса</a></li>
-		<li><a href="#">Услуги</a></li>
+		<%= content_tag :li, :class => ('header__menu-selected' if controller_name == "services") do %>
+		<%= link_to "Услуги", services_path %>
+		<% end %>
 		<li><a href="#">Отзывы</a></li>
-		<li><a href="#">Новости</a></li>
+		<%= content_tag :li, :class => ('header__menu-selected' if controller_name == "news") do %>
+		<%= link_to "Новости", news_index_path %>
+		<% end %>
 	</ul>
 	<p class="header__phone"><b>8 800 123-4567</b> единый многоканальный</p>
 </div></div>
