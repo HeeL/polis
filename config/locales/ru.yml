@@ -15,7 +15,7 @@ ru:
       doctor:
         name: "ФИО"
         job: "Должность"
-        schedule: "Часы приема"
+        schedule: "Прием"
         office_id: "Отделение"
         office: "Пункт"
       about:

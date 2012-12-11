@@ -8,7 +8,7 @@ ActiveAdmin.register Doctor do
      column :job
      column :schedule
      column :office_id do |column|
-        Office.where(:id => column).first.title
+        Office.where(:id => column.office_id).first.title
       end
 
      default_actions
@@ -18,7 +18,7 @@ ActiveAdmin.register Doctor do
      f.inputs do
      f.input :name
      f.input :job
-     f.input :schedule
+     f.input :schedule, :as => :ckeditor, :label => false, :input_html => { :toolbar => 'Easy' }
      f.input :office_id, :as => :select, :collection => Office.all
    end
    f.buttons
@@ -28,7 +28,9 @@ ActiveAdmin.register Doctor do
          attributes_table do
            row :name
            row :job
-           row :schedule
+           row :schedule do |doctor|
+             sanitize doctor.schedule
+           end
            row :office_id do
              Office.where(:id => doctor.office_id).first.title
            end

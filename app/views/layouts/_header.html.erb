@@ -5,7 +5,9 @@
 		<%= content_tag :li, :class => ('header__menu-selected' if controller_name == "abouts") do %>
 		<%= link_to "Полис", abouts_path %>
 		<% end %>
-		<li><a href="#">Адреса</a></li>
+		<%= content_tag :li, :class => ('header__menu-selected' if controller_name == "offices") do %>
+		<%= link_to "Адреса", offices_path %>
+		<% end %>
 		<%= content_tag :li, :class => ('header__menu-selected' if controller_name == "services") do %>
 		<%= link_to "Услуги", services_path %>
 		<% end %>

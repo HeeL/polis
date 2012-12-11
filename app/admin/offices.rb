@@ -4,6 +4,7 @@ ActiveAdmin.register Office do
   config.sort_order = 'title_asc'
   
          index do 
+          column :id
           column :title
           column :adress
 
@@ -14,8 +15,7 @@ ActiveAdmin.register Office do
           f.inputs "Details" do
           f.input :title
           f.input :adress
-          f.input :photo, :as => :file, :label => "picture"
-          f.input :contact
+          f.input :map
         end
         f.buttons
        end
@@ -24,10 +24,9 @@ ActiveAdmin.register Office do
               attributes_table do
                 row :title
                 row :adress
-                row :photo do
-                  image_tag(office.photo.url, :size => "470x170")
+                row :map do |office|
+                  office.map.html_safe 
                 end
-                row :contact
               end
             end
     end

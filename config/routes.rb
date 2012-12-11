@@ -17,7 +17,7 @@ Polisoms::Application.routes.draw do
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   
-  root :to => 'offices#index'
+  root :to => 'abouts#index'
 
   resources :news
 end
