@@ -1,19 +1,20 @@
 <div class="body clearfix">
-	<div class="address">
-		<div class="address__top">
-			<div class="address__selector">
-				<a href="javascript:;" class="address__selector-label">Выберите отделение</a>
-				<div class="address__selector-list">
-					<ul>
-						<li><a href="javascript:;">Лодейное поле, ул. Ленина</a></li>
-						<li><a href="javascript:;">Синявино-2, ул. Подвойского</a></li>
-						<li class="address__selector-selected"><a href="javascript:;">Песочное-2, ул. Первомайская</a></li>
-						<li><a href="javascript:;">пос. Тарховка, ул. Всеволода Боброва</a></li>
-					</ul>
+		<div class="address">
+			<div class="address__top">
+				<div class="address__selector">
+					<a href="#" class="address__selector-label">Выберите отделение</a>
+					<div class="address__selector-list">
+						<ul>
+				<% @offices.each do |office| %>
+				<%= content_tag :li, :class => ('address__selector-selected' if @office == office) do %>
+				<%= link_to office.adress, office %>
+				<% end %>
+				<% end %>
+						</ul>
+					</div>
 				</div>
+				<p class="address__info"><b>Адрес:</b> Санкт-Петербург, поселок Песочный, улица Всеволода Боброва, дом 69</p>
 			</div>
-			<p class="address__info"><b>Адрес:</b>&nbsp<%= @office.adress %></p>
-		</div>
 		<div class="address__map">
 			<div class="address__map-data"><%= @office.map.html_safe %></div>
 			<a href="#" class="address__map-expand">Расширить карту</a>

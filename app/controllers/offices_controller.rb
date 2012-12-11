@@ -16,7 +16,10 @@ class OfficesController < ApplicationController
   # GET /offices/1
   # GET /offices/1.json
   def show
+    @offices = Office.all
     @office = Office.find(params[:id])
+    @doctors = Doctor.where(:office_id => @office.id).all
+    @articles = Article.where(:office_id => @office.id).all
 
     respond_to do |format|
       format.html # show.html.erb

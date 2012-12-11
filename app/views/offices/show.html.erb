@@ -1,10 +1,51 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Title:</b>
-  <%= @office.title %>
-</p>
-
-
-<%= link_to 'Edit', edit_office_path(@office) %> |
-<%= link_to 'Back', offices_path %>
+<div class="body clearfix">
+		<div class="address">
+			<div class="address__top">
+				<div class="address__selector">
+					<a href="#" class="address__selector-label">Выберите отделение</a>
+					<div class="address__selector-list">
+						<ul>
+				<% @offices.each do |office| %>
+				<%= content_tag :li, :class => ('address__selector-selected' if @office == office) do %>
+				<%= link_to office.adress, office %>
+				<% end %>
+				<% end %>
+						</ul>
+					</div>
+				</div>
+				<p class="address__info"><b>Адрес:</b> Санкт-Петербург, поселок Песочный, улица Всеволода Боброва, дом 69</p>
+			</div>
+		<div class="address__map">
+			<div class="address__map-data"><%= @office.map.html_safe %></div>
+			<a href="#" class="address__map-expand">Расширить карту</a>
+		</div>
+		<div class="address__bottom">
+			<a href="#" class="address__bottom-register">Записаться на прием к врачу</a>
+			<p><a href="#">Что взять с собой на прием?</a><br/><a href="#">Поблагодарить</a> или <a href="#">пожаловаться</a></p>
+		</div>
+		<div class="clearfix">
+			<div class="doctors">
+				<ul>
+				<% @doctors.each do |doctor| %>
+					<li class="doctor">
+						<b class="doctor__name"><%= doctor.name %></b>
+						<span class="doctor__info"><%= doctor.job %></span>
+						<p class="doctor__hours"><em>Прием:</em><%= doctor.schedule.html_safe %></p>
+						<a href="#" class="doctor__register">Записаться на прием</a>
+					</li>
+				<% end %>
+				</ul>
+			</div>
+			<div class="address_right">
+				<div class="othernews">
+					<h2 class="othernews__title"></h2>
+					<ul class="othernews__list">
+						<% @articles.each do |article| %>
+						<li><span><%= article.date %> | <%= Office.where(:id => article.office_id).first.title %></span><%= link_to article.title, article %></li>
+						<% end %>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
