@@ -6,7 +6,7 @@ ActiveAdmin.register Article do
     index do 
      column :title
      column :photo do |column|
-       image_tag(column.photo.url)
+       image_tag(column.photo.url(:content))
       end
      column :date
      column :office_id do |column|
@@ -35,7 +35,7 @@ ActiveAdmin.register Article do
          attributes_table do
            row :title
            row :photo do |article|
-             image_tag(article.photo.url)
+             image_tag(article.photo.url(:content))
            end
            row :date
            row :office_id do |article|

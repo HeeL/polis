@@ -6,7 +6,7 @@
 				<div class="clearfix"><%= link_to "Назад", 'javascript:history.back()' %></div>
 				<h2 class="newsdata__title"><%= @article.title %></h2>
 				<span class="newsdata__subtitle"><%= @article.date %> | <%= Office.where(:id => @article.office_id).first.title %></span>
-				<div class="newsdata__image"><%= image_tag(@article.photo.url) %></div>
+				<div class="newsdata__image"><%= image_tag(@article.photo.url(:content)) %></div>
 				<p><%= sanitize @article.description %></p>
 				<a href="#top" class="newsdata__top">Вверх</a>
 			</div>			
