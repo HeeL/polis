@@ -1,4 +1,7 @@
 Polisoms::Application.routes.draw do
+  resources :reviews
+
+
   resources :articles
 
 

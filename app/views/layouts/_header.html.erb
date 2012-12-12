@@ -11,7 +11,9 @@
 		<%= content_tag :li, :class => ('header__menu-selected' if controller_name == "services") do %>
 		<%= link_to "Услуги", services_path %>
 		<% end %>
-		<li><a href="#">Отзывы</a></li>
+		<%= content_tag :li, :class => ('header__menu-selected' if controller_name == "reviews") do %>
+		<%= link_to "Отзывы", reviews_path %>
+		<% end %>
 		<%= content_tag :li, :class => ('header__menu-selected' if controller_name == "articles") do %>
 		<%= link_to "Новости", articles_path %>
 		<% end %>

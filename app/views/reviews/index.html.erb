@@ -1,0 +1,26 @@
+<div class="body clearfix">
+	<!-- left -->
+	<div class="body__left">
+		<div class="response__menu">
+			<a href="#" class="response__menu-up">Поблагодарить</a>
+			<a href="#" class="response__menu-down">Пожаловаться</a>
+			<a href="#" class="response__menu-write">Написать отзыв</a>
+		</div>
+	</div>
+	<!-- end left -->
+	<!-- data -->		
+	<div class="body__data">	
+		<h1 class="response__title">Отзывы о компании</h1>
+		<ul class="responses">
+			<% @reviews.each do |review| %>
+			<li>
+				<b><%= review.author %></b><span><%= review.created_at.strftime("%d.%m.%Y %H:%M") %> | Отделение <%= Office.where(:id => review.office_id).first.title %></span><p><%= review.description %></p>
+			</li>
+			<% end %>
+		</ul>
+		<!-- pagination -->
+		<%= will_paginate @posts, :container => true, :class => 'flickr_pagination' %>
+		<!-- end pagination -->			
+	</div>
+	<!-- end data -->
+</div>

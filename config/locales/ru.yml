@@ -11,6 +11,7 @@ ru:
       about: "О компании"
       service: "Услуги"
       title: "Заголовок"
+      review: "Отзывы"
     attributes:
       doctor:
         name: "ФИО"
@@ -35,6 +36,12 @@ ru:
       office:
         title: "Название"
         adress: "Адрес"
+      review:
+        doctor: "Доктор"
+        office: "Отделение"
+        author: "Автор"
+        contact: "Контактная информация"
+        description: "Отзыв" 
   active_admin:
     dashboard: Dashboard
     dashboard_welcome:
