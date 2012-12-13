@@ -36,7 +36,8 @@
   .flickr_pagination a {
   padding: 0px 2px 0px 0px; width: 25px; height: 27px; display: block; margin: 0px 4px 0px 0px; float: left; text-align: center; font: 12px/25px Tahoma; color: #717171 !important; text-decoration: none !important;}
 
-    .flickr_pagination a:hover, .flickr_pagination a:focus { }
+    .flickr_pagination a:hover, .flickr_pagination a:focus {
+	background-position: 0px -27px; }
   .flickr_pagination .page_info {
     color: #aaaaaa;
     padding-top: 0.8em; }
