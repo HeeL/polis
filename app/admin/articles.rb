@@ -10,8 +10,15 @@ ActiveAdmin.register Article do
       end
      column :date
      column :office_id do |column|
-        Office.where(:id => column).first.title
+       
+       if column.office_id != nil
+         Office.where(:id => column.office_id).first.title
+       else
+         nil
+       end
+      
       end
+      
     column :description do |column|
       truncate(strip_tags(column.description), length: 100)
     end
@@ -39,7 +46,11 @@ ActiveAdmin.register Article do
            end
            row :date
            row :office_id do |article|
-             Office.where(:id => article.office_id).first.title
+              if article.office_id != nil
+                Office.where(:id => article.office_id).first.title
+              else
+                nil
+              end
            end
            row :description do |article|
              truncate(strip_tags(article.description), length: 800)

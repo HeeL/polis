@@ -23,20 +23,7 @@
 	<!-- data -->		
 	<div class="body__data">
 		<h1 class="news__title">новости компании полис</h1>
-		<ul class="news">
-			<% @articles.each do |article| %>
-			<li>
-				<div class="news__item-top">
-					<div class="news__item-image"><%= image_tag(article.photo.url(:content)) %></div>
-					<%= link_to article.title, article %>
-					<span><%= article.date %> | <%= Office.where(:id => article.office_id).first.title %></span>
-				</div>
-				<p><%= truncate(strip_tags(article.description), length: 600) %></p>
-				
-				<%= link_to "Читать полностью", article, :class => 'news__item-open' %>
-			</li>
-			<% end %>				
-		</ul>	
+		<%= render 'news' %>
 		
 		<%= will_paginate @posts, :container => true, :class => 'flickr_pagination' %>
 			  

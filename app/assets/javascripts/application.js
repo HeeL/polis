@@ -11,6 +11,13 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
+//= require_self
 //= require jquery_ujs
 //= require_tree .
 //= require ckeditor/init
+
+$('#radio1').bind('select', function(){
+$('.left__news-section input[type=checkbox]').each(function(checkbox){
+checkbox.attr('checked', 'false') // вроде так убирать аттрибут
+}
+})
