@@ -2,31 +2,43 @@
 	<!-- left -->
 	<div class="body__left">
 		<div class="left__news">
+			<form>
 			<div class="left__news-section">
-				<div class="left__news-item left__news-selected clearfix"><input type="radio" name="left__news-radio" class="left__news-radio"  id="radio1"/><label for="radio1">Показать все новости</label></div>
+				<div class="left__news-item left__news-selected clearfix"><input type="radio" value="all" name="radio" class="left__news-radio"  id="radio1"/><label for="radio1">Показать все новости</label></div>
 			</div>
 			<div class="left__news-section clearfix">
-				<div class="left__news-item clearfix"><input type="radio" class="left__news-radio" name="left__news-radio"  id="radio2"/><label for="radio2">Только по отделениям:</label></div>
+				<div class="left__news-item clearfix"><input type="radio" value="by" class="left__news-radio" name="radio"  id="radio2"/><label for="radio2">Только по отделениям:</label></div>
 				
-				
+					
 					<% @offices.each do |office| %>
 						<div class="left__news-item clearfix">
-						<%= check_box_tag :office, '1', false, :class => 'left__news-check' %> 
+						<%= check_box_tag :office, office.id, false, :class => 'left__news-check' %> 
 						<%= label_tag office.title %>
 						</div>
-					<% end %>	
+					<% end %>
+					
 				
 			</div>
+			<div>
+			    <input type="submit" name="submit" value="Сортировать" id="g" />
+			  </div>
+			</form>
 		</div>
+
 	</div>
 	<!-- end left -->
 	<!-- data -->		
 	<div class="body__data">
 		<h1 class="news__title">новости компании полис</h1>
-		<%= render 'news' %>
 		
+		<ul class="news">
+		<%= render 'news' %>
+		</ul>
 		<%= will_paginate @posts, :container => true, :class => 'flickr_pagination' %>
 			  
 	</div>
 	<!-- end data -->
 </div>
+
+
+

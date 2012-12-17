@@ -2,14 +2,23 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.paginate(:page => params[:page], :per_page => 6).order('created_at DESC')
-    @offices = Office.all
-
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @articles }
-    end
+      @offices = Office.all # для рендера списка отделений
+      
+      if params[:radio] != 'all' # сортировка результатов по отделения
+        articles = Article.where(:office_id => params[:office])
+      else
+        articles = Article # все отделения
+      end
+    
+      @articles = articles.paginate(:page => params[:page], :per_page => 6).order('created_at DESC')
+      
+     # if request.xhr? 
+      #    render :partial => 'news'
+       # else
+        #  respond_to do |format|
+         #   format.html 
+         # end
+        # end
   end
 
   # GET /articles/1
