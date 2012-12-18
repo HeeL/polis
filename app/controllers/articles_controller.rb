@@ -2,12 +2,15 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
+    
+
       @offices = Office.all # для рендера списка отделений
       
-      if params[:radio] != 'all' # сортировка результатов по отделения
-        articles = Article.where(:office_id => params[:office])
-      else
+      if params[:radio] == 'all' # сортировка результатов по отделения
         articles = Article # все отделения
+        
+      else
+        articles = Article.where(:office_id => params[:office])
       end
     
       @articles = articles.paginate(:page => params[:page], :per_page => 6).order('created_at DESC')
