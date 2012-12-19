@@ -6,11 +6,10 @@ class ArticlesController < ApplicationController
 
       @offices = Office.all # для рендера списка отделений
       
-      if params[:radio] == 'all' # сортировка результатов по отделения
-        articles = Article # все отделения
-        
-      else
+      if params[:radio] == 'by' # сортировка результатов по отделения
         articles = Article.where(:office_id => params[:office])
+      else
+        articles = Article # все отделения
       end
     
       @articles = articles.paginate(:page => params[:page], :per_page => 6).order('created_at DESC')
