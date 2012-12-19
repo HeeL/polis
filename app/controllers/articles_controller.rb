@@ -15,13 +15,13 @@ class ArticlesController < ApplicationController
     
       @articles = articles.paginate(:page => params[:page], :per_page => 6).order('created_at DESC')
       
-     # if request.xhr? 
-      #    render :partial => 'news'
-       # else
-        #  respond_to do |format|
-         #   format.html 
-         # end
-        # end
+     if request.xhr? 
+     render :partial => 'news'
+      else
+      respond_to do |format|
+         format.html 
+      end
+      end
   end
 
   # GET /articles/1
