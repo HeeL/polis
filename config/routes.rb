@@ -3,15 +3,15 @@ Polisoms::Application.routes.draw do
 
 
   resources :articles
-
-
+  
+  match '/load_articles' => 'articles#index'
+  
   resources :services
 
 
   mount Ckeditor::Engine => '/ckeditor'
 
   resources :abouts
-
 
   resources :offices
 
