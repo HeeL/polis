@@ -15,11 +15,3 @@
 //= require jquery_ujs
 //= require_tree .
 //= require ckeditor/init
-
-$(document).ready(function(){
-  
-  $('#sort_form').bind('ajax:success', function(data, response, xhr){
-    $('#news_block').html(response);
-  });
-  
-});
