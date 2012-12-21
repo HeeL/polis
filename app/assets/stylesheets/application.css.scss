@@ -1,0 +1,65 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require public.css
+ */
+
+/** Fonts **/
+
+
+
+small {
+	font: 12px/12px Tahoma !important;
+	color: #999 !important;
+	position: absolute !important;
+	display: block !important;
+	right: 0px !important;
+	bottom: -20px !important;
+	z-index: 1;
+	
+	a {
+		color: #999 !important;
+		
+	}
+	
+	
+	
+}
+
+
+/** Pagination **/
+
+.flickr_pagination {
+  padding: 0px 0px 60px 200px;
+  
+}
+  .flickr_pagination a, .flickr_pagination span, .flickr_pagination em {
+    padding: 0px 2px 0px 0px; width: 25px; height: 27px; display: block; margin: 0px 4px 0px 0px; float: left; text-align: center; font: 12px/25px Tahoma; color: #717171; text-decoration: none; background: url(pagination__item.png) no-repeat;}
+
+  .flickr_pagination .disabled {
+    color: #aaaaaa; }
+
+  .flickr_pagination .current {color: #f2f2f2; background: url(pagination__selected.png) no-repeat; width: 23px;}
+
+  .flickr_pagination a {
+  padding: 0px 2px 0px 0px; width: 25px; height: 27px; display: block; margin: 0px 4px 0px 0px; float: left; text-align: center; font: 12px/25px Tahoma; color: #717171 !important; text-decoration: none !important;}
+
+    .flickr_pagination a:hover, .flickr_pagination a:focus {
+	background-position: 0px -27px; }
+  .flickr_pagination .page_info {
+    color: #aaaaaa;
+    padding-top: 0.8em; }
+  .flickr_pagination .previous_page, .flickr_pagination .next_page {
+    border-width: 2px; }
+  .flickr_pagination .previous_page {
+ }
+  .flickr_pagination .next_page {
+ }
