@@ -8,6 +8,7 @@ ActiveAdmin.register Service do
      column :description do |service|
        truncate(strip_tags(service.description), length: 800)  
      end
+     column :appointment
 
      default_actions
    end
@@ -16,6 +17,7 @@ ActiveAdmin.register Service do
      f.inputs do
      f.input :title
      f.input :description, :as => :ckeditor, :label => false, :input_html => { :toolbar => 'Easy' }
+     f.input :appointment
    end
    f.buttons
   end
@@ -26,6 +28,7 @@ ActiveAdmin.register Service do
            row :description do
              truncate(strip_tags(service.description), length: 800)  
            end
+           row :appointment
          end
        end
 end

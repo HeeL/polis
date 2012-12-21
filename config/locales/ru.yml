@@ -31,6 +31,7 @@ ru:
       service:
         title: "Заголовок"
         description: "Текст"
+        appointment: "Записаться на прием"
       article:
         title: "Заголовок"
         photo: "Фото"
