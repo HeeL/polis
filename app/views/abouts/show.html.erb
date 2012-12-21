@@ -12,9 +12,11 @@
 			</ul>
 			<h3 class="left__menu-title">Полезная информация</h3>
 			<ul>
-				<li><a href="#">Как записаться на прием?</a></li>
-				<li><a href="#">Что взять с собой на прием?</a></li>
-				<li><a href="#">Больно ли удалять файлы?</a></li>
+				<% @usefulls.each do |about| %>
+		      	<%= content_tag :li, :class => ('left__menu-selected' if @about == about) do %>
+				<%= link_to about.title, about %>
+				<% end %>
+		        <% end %>
 			</ul>
 		</div>
 	</div>

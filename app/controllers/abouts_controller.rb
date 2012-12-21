@@ -2,7 +2,10 @@ class AboutsController < ApplicationController
   # GET /abouts
   # GET /abouts.json
   def index
-    @abouts = About.all
+    
+    
+    @abouts = About.where(:category => 'About')
+    @usefulls = About.where(:category => 'Usefull')
     @about = About.first
 
     respond_to do |format|
@@ -14,7 +17,8 @@ class AboutsController < ApplicationController
   # GET /abouts/1
   # GET /abouts/1.json
   def show
-    @abouts = About.all
+    @abouts = About.where(:category => 'About')
+    @usefulls = About.where(:category => 'Usefull')
     @about = About.find(params[:id])
 
     respond_to do |format|

@@ -5,6 +5,9 @@ ActiveAdmin.register About do
  
     index do 
      column :title
+     column :category do |column|
+       t(column.category)
+     end
      column :description do |about|
        truncate(strip_tags(about.description), length: 800)  
      end
@@ -15,6 +18,7 @@ ActiveAdmin.register About do
    form :html => { :enctype => "multipart/form-data" } do |f|
      f.inputs do
      f.input :title
+     f.input :category, :as => :radio, :collection => Hash[About::CATEGORIES.map{|b| [t(b),b]}]
      f.input :description, :as => :ckeditor, :label => false, :input_html => { :toolbar => 'Easy' }
    end
    f.buttons
@@ -23,6 +27,9 @@ ActiveAdmin.register About do
    show do
          attributes_table do
            row :title
+           row :category do |row|
+             t(row.category)
+           end
            row :description do
              truncate(strip_tags(about.description), length: 800)  
            end

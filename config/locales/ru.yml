@@ -1,4 +1,7 @@
 ru:
+  About: "О компании Полис"
+  Usefull: "Полезная информация"
+  choose: "Выбирите"
   will_paginate:
     previous_label: "&lt;"
     next_label: "&gt;"
@@ -8,7 +11,7 @@ ru:
       doctor: "Врачи"
       office: "Отделения"
       article: "Новости"
-      about: "О компании"
+      about: "Полис"
       service: "Услуги"
       title: "Заголовок"
       review: "Отзывы"
@@ -22,6 +25,9 @@ ru:
       about:
         title: "Заголовок"
         description: "Текст"
+        category: "Раздел"
+        about: "О компании Полис"
+        usefull: "Полезная информация"
       service:
         title: "Заголовок"
         description: "Текст"
