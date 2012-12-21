@@ -1,3 +1,6 @@
+function control_in(control, text){ if (text == control.value) control.value = ''; }
+function control_out(control, text){ if ('' == control.value) control.value = text; }
+
 function doc_scroll_top(){
 
     if ( window.pageYOffset ) { return window.pageYOffset; }
