@@ -53,7 +53,7 @@ ActiveAdmin.register Article do
               end
            end
            row :description do |article|
-             truncate(strip_tags(article.description), length: 800)
+             truncate(strip_tags(article.description), length: 500)
            end
        end  
      end

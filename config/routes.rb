@@ -1,4 +1,6 @@
 Polisoms::Application.routes.draw do
+  get "static_pages/home"
+
   resources :reviews
 
 
@@ -20,7 +22,7 @@ Polisoms::Application.routes.draw do
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   
-  root :to => 'abouts#index'
+  root :to => 'static_pages#home'
 
   resources :news
 end
