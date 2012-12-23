@@ -2,7 +2,7 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 jQuery ->
-  $('#review_doctor_id').parent().hide()
+  
   states = $('#person_state_id').html()
   $('#person_country_id').change ->
     country = $('#person_country_id :selected').text()
