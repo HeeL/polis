@@ -4,6 +4,7 @@ class ReviewsController < ApplicationController
   def index
     @reviews = Review.paginate(:page => params[:page], :per_page => 6).order('created_at DESC')
     @review = Review.new
+    
       
     respond_to do |format|
       format.html # index.html.erb

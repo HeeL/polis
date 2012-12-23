@@ -4,7 +4,8 @@
 	<h2 class="popupresponse__title">Оставить свой отзыв</h2>
 	<div class="popupresponse__data">
 		<%= form_for(@review) do |f| %>
-		<div class="popupresponse__left clearfix"><label>Я хочу</label><select><option>Пожаловаться</option><option>Поблагодарить</option></select></div>
+		<div class="popupresponse__left clearfix"><label>Я хочу</label>
+			<%= f.select(:status, options_for_select([['Поблагодарить', 'Positive'], ['Пожаловаться', 'Negative'], ['Оставить отзыв', 'Review']])) %></div>
 		<div class="popupresponse__right">
 			<div class="popupresponse__line popupresponse__line-first clearfix"><label>Отделение</label><select><option>Коменданский проспект, 299</option></select></div>
 			<div class="popupresponse__line clearfix"><input type="checkbox" /><label>Врач</label><select><option>Борменталь Игорь Борисович</option></select></div>
@@ -17,7 +18,8 @@
 		<%= f.text_field :contact, :class => 'popupresponse__email', :value=> "e-mail или номер телефона" %>
 	</div>
 	<%= f.text_area :description, :value=> "Ваш отзыв" %>
-	<%= f.submit %>
+	<%= f.submit "Отправить отзыв", :class => "popupresponse__submit" %>
+
 	
 	<% end %>
 </div>

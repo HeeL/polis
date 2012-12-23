@@ -2,6 +2,9 @@ ru:
   About: "О компании Полис"
   Usefull: "Полезная информация"
   choose: "Выбирите"
+  Positive: "Поблагодарить"
+  Negative: "Пожаловаться"
+  Review: "Оставить отзыв"
   will_paginate:
     previous_label: "&lt;"
     next_label: "&gt;"
@@ -45,10 +48,14 @@ ru:
         adress: "Адрес"
       review:
         doctor: "Доктор"
+        doctor_id: "Доктор"
+        office_id: "Отделение"
         office: "Отделение"
         author: "Автор"
         contact: "Контактная информация"
         description: "Отзыв" 
+        status: "Тип"
+        created_at: "Создан"
   active_admin:
     dashboard: Dashboard
     dashboard_welcome:

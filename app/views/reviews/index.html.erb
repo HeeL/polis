@@ -19,9 +19,12 @@
 				| Отделение: <%= Office.where(:id => review.office_id).first.title %></span>
 					<% end %>
 					<% unless review.doctor_id.blank? %>
-				| Врач: <%= Doctor.where(:id => review.doctor_id).first.name %></span>
+			<span>	| Врач: <%= Doctor.where(:id => review.doctor_id).first.name %></span>
 					<% end %>
 					<p><%= review.description %></p>
+						<% unless review.status.blank? %>
+					<%= review.status %>
+						<% end %>
 			</li>
 			<% end %>
 		</ul>
