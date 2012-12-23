@@ -4,7 +4,8 @@ class ReviewsController < ApplicationController
   def index
     @reviews = Review.paginate(:page => params[:page], :per_page => 6).order('created_at DESC')
     @review = Review.new
-    
+    @offices = Office.all
+    @doctors = Doctor.all
       
     respond_to do |format|
       format.html # index.html.erb
@@ -38,7 +39,7 @@ class ReviewsController < ApplicationController
 
     respond_to do |format|
       if @review.save
-        format.html { redirect_to action: "index", notice: 'Review was successfully created.' }
+        format.html { redirect_to action: "index" }
         format.json { render json: @review, status: :created, location: @review }
       else
         format.html { render action: "new" }
