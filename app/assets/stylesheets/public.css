@@ -313,5 +313,5 @@ a.popupresponse__line-add:hover{color: #9a95c8; background-position: 9px -16px; 
 .popupresponse__email{float: left; display: block; width: 230px; border: 1px solid #ccc;  height: 22px; padding: 2px 5px 2px 5px; font: 13px/22px Arial;}
 .popupresponse textarea{width: 630px; height: 54px; padding: 2px 4px; margin: 0px 0px 12px 0px; border: 1px solid #ccc; font: 13px/16px Arial;}
 
-input.popupresponse__submit, input.popupresponse__submit:link, input.popupresponse__submit:visited{font: 16px/35px 'Conv_PFDinTextCondPro-Regular'; color: #555; text-align: center; display: block; width: 183px; height: 35px; background: url(popupresponse__submit.png) no-repeat; text-decoration: none;}
+input.popupresponse__submit, input.popupresponse__submit:link, input.popupresponse__submit:visited{font: 16px/35px 'Conv_PFDinTextCondPro-Regular'; color: #555; text-align: center; display: block; width: 183px; height: 35px; border: none !important; padding: 0px !important; background: url(popupresponse__submit.png) no-repeat; text-decoration: none;}
 input.popupresponse__submit:hover{background-position: 0px -35px;}

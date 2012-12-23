@@ -37,9 +37,6 @@ function show_popupresponse()
 
 }
 
-$(document).ready(function()
-{
-
 function on_resize()
 {		
 	var dy = 0;
@@ -61,8 +58,6 @@ function on_resize()
 		$('.footer').css('position', 'static');
 	}
 }
-
-});
 
 function init_start_info()
 {
