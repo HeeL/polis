@@ -14,7 +14,14 @@
 		<ul class="responses">
 			<% @reviews.each do |review| %>
 			<li>
-				<b><%= review.author %></b><span><%= review.created_at.strftime("%d.%m.%Y %H:%M") %> | Отделение <%= Office.where(:id => review.office_id).first.title %></span><p><%= review.description %></p>
+				<b><%= review.author %></b><span><%= review.created_at.strftime("%d.%m.%Y %H:%M") %> 
+					<% unless review.office_id.blank? %>
+				| Отделение: <%= Office.where(:id => review.office_id).first.title %></span>
+					<% end %>
+					<% unless review.doctor_id.blank? %>
+				| Врач: <%= Doctor.where(:id => review.doctor_id).first.name %></span>
+					<% end %>
+					<p><%= review.description %></p>
 			</li>
 			<% end %>
 		</ul>
@@ -24,3 +31,6 @@
 	</div>
 	<!-- end data -->
 </div>
+
+<%= render 'review' %>
+

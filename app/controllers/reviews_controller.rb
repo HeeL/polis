@@ -2,8 +2,9 @@ class ReviewsController < ApplicationController
   # GET /reviews
   # GET /reviews.json
   def index
-    @reviews = Review.paginate(:page => params[:page], :per_page => 2).order('created_at DESC')
-
+    @reviews = Review.paginate(:page => params[:page], :per_page => 6).order('created_at DESC')
+    @review = Review.new
+      
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @reviews }
@@ -23,14 +24,6 @@ class ReviewsController < ApplicationController
 
   # GET /reviews/new
   # GET /reviews/new.json
-  def new
-    @review = Review.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @review }
-    end
-  end
 
   # GET /reviews/1/edit
   def edit
@@ -44,7 +37,7 @@ class ReviewsController < ApplicationController
 
     respond_to do |format|
       if @review.save
-        format.html { redirect_to @review, notice: 'Review was successfully created.' }
+        format.html { redirect_to action: "index", notice: 'Review was successfully created.' }
         format.json { render json: @review, status: :created, location: @review }
       else
         format.html { render action: "new" }
