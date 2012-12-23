@@ -21,10 +21,7 @@
 					<% unless review.doctor_id.blank? %>
 			<span>	| Врач: <%= Doctor.where(:id => review.doctor_id).first.name %></span>
 					<% end %>
-					<p><%= review.description %></p>
-						<% unless review.status.blank? %>
-					<%= review.status %>
-						<% end %>
+					<p><%= review.description %></p> 
 			</li>
 			<% end %>
 		</ul>
