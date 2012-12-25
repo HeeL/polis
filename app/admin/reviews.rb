@@ -18,7 +18,7 @@ ActiveAdmin.register Review do
     end
     column :doctor_id do |column|
       unless column.doctor_id.blank?
-		Doctor.where(:id => column.doctor_id).name.title
+		Doctor.where(:id => column.doctor_id).first.name
 			end
     end
     column :description do |column|
@@ -27,13 +27,14 @@ ActiveAdmin.register Review do
     column :author
     column :contact
     column :created_at
+    column :check
 
     default_actions
   end
 
    form :html => { :enctype => "multipart/form-data" } do |f|
       f.inputs "Details" do
-      f.input :status
+      f.input :check
     end
     f.buttons
    end

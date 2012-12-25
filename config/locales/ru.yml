@@ -65,6 +65,7 @@ ru:
         description: "Отзыв" 
         status: "Тип"
         created_at: "Создан"
+        check: "Проверен"
   active_admin:
     dashboard: Dashboard
     dashboard_welcome:

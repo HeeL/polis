@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121225105918) do
+ActiveRecord::Schema.define(:version => 20121225195827) do
 
   create_table "abouts", :force => true do |t|
     t.string   "title"
@@ -111,6 +111,7 @@ ActiveRecord::Schema.define(:version => 20121225105918) do
     t.datetime "updated_at",  :null => false
     t.string   "status"
     t.string   "doctors"
+    t.boolean  "check"
   end
 
   create_table "services", :force => true do |t|
