@@ -14,7 +14,13 @@
 		show_popupresponse();
 	});
 	
+	$(".i1").click(function(){
+		show_popupresponse();
+	});
 	
+	$(".i2").click(function(){
+		show_popupresponse();
+	});
 		
 	});
 

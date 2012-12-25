@@ -14,7 +14,9 @@
 
 /** Fonts **/
 
-
+.start__news-list li:nth-child(3) {
+	padding: 0px;	
+}
 
 small {
 	font: 12px/12px Tahoma !important;
@@ -26,12 +28,8 @@ small {
 	z-index: 1;
 	
 	a {
-		color: #999 !important;
-		
+		color: #999 !important;	
 	}
-	
-	
-	
 }
 
 
