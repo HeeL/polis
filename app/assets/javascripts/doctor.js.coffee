@@ -2,15 +2,15 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 jQuery ->
-  
-  states = $('#person_state_id').html()
-  $('#person_country_id').change ->
-    country = $('#person_country_id :selected').text()
-    escaped_country = country.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1')
-    options = $(states).filter("optgroup[label='#{escaped_country}']").html()
+
+  doctors = $('#review_doctor_id').html()
+  $('#review_office_id').change ->
+    office = $('#review_office_id :selected').text()
+    escaped_office = office.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1')
+    options = $(doctors).filter("optgroup[label='#{escaped_office}']").html()
     if options
-      $('#person_state_id').html(options)
-      $('#person_state_id').parent().show()
+      $('#review_doctor_id').html(options)
+      $('#review_doctor_id').parent().show()
     else
-      $('#person_state_id').empty()
-      $('#person_state_id').parent().hide()
+      $('#review_doctor_id').empty()
+      $('#review_doctor_id').parent().hide()

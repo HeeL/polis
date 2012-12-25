@@ -26,7 +26,7 @@ function show_popupresponse()
 		$('.popupresponse').hide();	
 		$('#shadow').hide();	
 		
-		return false;
+		
 	});
 	
 	$(".popupresponse__line-add").click(function()

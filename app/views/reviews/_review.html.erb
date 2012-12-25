@@ -9,7 +9,7 @@
 		<div class="popupresponse__right">
 			<div class="popupresponse__line popupresponse__line-first clearfix"><label>Отделение</label>
 			<%= f.collection_select(:office_id, @offices, :id, :title) %></div>
-			<div id="doctor" class="popupresponse__line clearfix">
+			<div class="popupresponse__line clearfix">
 				
 		<input type="checkbox" /><label>Врач</label><%= f.grouped_collection_select(:doctor_id, @offices, :doctors, :title, :id, :name) %>
 				
