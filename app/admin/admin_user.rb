@@ -1,4 +1,5 @@
-ActiveAdmin.register AdminUser do    
+ActiveAdmin.register AdminUser do  
+  config.batch_actions = false  
   menu :if => proc{ can?(:manage, AdminUser) }     
   controller.authorize_resource 
     

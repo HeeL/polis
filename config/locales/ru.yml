@@ -20,6 +20,11 @@ ru:
       review: "Отзывы"
       admin_user: "Администраторы"
     attributes:
+      admin_user:
+        role: "Роль"
+        current_sign_in_at: "Вход"
+        last_sign_in_at: "Последний вход"
+        sign_in_count: "Сколько раз заходил"
       doctor:
         name: "ФИО"
         job: "Должность"
