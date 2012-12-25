@@ -21,6 +21,8 @@
 	$(".i2").click(function(){
 		show_popupresponse();
 	});
+	
+		
 		
 	});
 

@@ -1,4 +1,6 @@
 ActiveAdmin.register Article do
+  menu :if => proc{ can?(:manage, Article) }     
+  controller.authorize_resource
   config.batch_actions = false
   filter :office_id, collection: proc { Office.all }, as: :select
   config.sort_order = 'title_asc'

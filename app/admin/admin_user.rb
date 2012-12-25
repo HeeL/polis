@@ -1,8 +1,10 @@
-ActiveAdmin.register AdminUser do   
-menu false  
+ActiveAdmin.register AdminUser do    
+  menu :if => proc{ can?(:manage, AdminUser) }     
+  controller.authorize_resource 
     
   index do                            
-    column :email                     
+    column :email   
+    column :role                  
     column :current_sign_in_at        
     column :last_sign_in_at           
     column :sign_in_count             
@@ -13,10 +15,20 @@ menu false
 
   form do |f|                         
     f.inputs "Admin Details" do       
-      f.input :email                  
+      f.input :email  
+      f.input :role, :collection => ['superadmin', 'admin', 'manager']               
       f.input :password               
       f.input :password_confirmation  
     end                               
     f.buttons                         
-  end                                 
+  end   
+  
+  show do
+    attributes_table do
+      row :email
+      row :role
+      
+      end
+  end
+                                
 end                                   

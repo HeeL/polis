@@ -18,6 +18,7 @@ ru:
       service: "Услуги"
       title: "Заголовок"
       review: "Отзывы"
+      admin_user: "Администраторы"
     attributes:
       doctor:
         name: "ФИО"

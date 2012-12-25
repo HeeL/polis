@@ -6,6 +6,7 @@ gem 'paperclip'
 gem 'rails-i18n'
 gem "ckeditor", "3.7.3"
 gem 'will_paginate'
+gem "cancan"
 
 gem 'capistrano'
 gem 'unicorn'

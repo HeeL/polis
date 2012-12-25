@@ -1,4 +1,6 @@
 ActiveAdmin.register Doctor do
+  menu :if => proc{ can?(:manage, Doctor) }     
+  controller.authorize_resource
   config.batch_actions = false
   filter :office_id, collection: proc { Office.all }, as: :select
   config.sort_order = 'name_asc'

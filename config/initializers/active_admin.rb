@@ -94,7 +94,7 @@ ActiveAdmin.setup do |config|
   # roots for each namespace.
   #
   # Default:
-  config.root_to = 'doctors#index'
+  config.root_to = 'offices#index'
 
   # == Admin Comments
   #

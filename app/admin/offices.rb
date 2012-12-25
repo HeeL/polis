@@ -1,4 +1,6 @@
 ActiveAdmin.register Office do
+  menu :if => proc{ can?(:manage, Office) }     
+  controller.authorize_resource
   config.batch_actions = false
   config.clear_sidebar_sections!
   config.sort_order = 'title_asc'
