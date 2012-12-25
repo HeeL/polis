@@ -5,6 +5,9 @@ ru:
   Positive: "Поблагодарить"
   Negative: "Пожаловаться"
   Review: "Оставить отзыв"
+  superadmin: "Супер администратор"
+  admin: "Администратор"
+  manager: "Кол центр"
   will_paginate:
     previous_label: "&lt;"
     next_label: "&gt;"

@@ -8,4 +8,6 @@ class AdminUser < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :role
   # attr_accessible :title, :body
+  ROLES = [ "superadmin", "admin", "manager" ]
+  validates :role, inclusion: ROLES
 end

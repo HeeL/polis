@@ -29,10 +29,22 @@ function show_popupresponse()
 		
 	});
 	
-	$(".popupresponse__line-add").click(function()
-	{
-		$(".popupresponse__right").append('<div class="popupresponse__line clearfix"><input type="checkbox" /><label>Врач</label><select><option>Борменталь Игорь Борисович</option></select></div>');
-		return false;
+	
+
+	
+
+	//новый список
+
+	$(".popupresponse__line-add").click(function(){
+		
+		oldlist = $($('#review_doctor_id').html()) //старый список
+
+		selected = $('#review_doctor_id option:selected').html() //выбранный врач
+
+		newlist = oldlist.remove(selected);
+		
+		
+		$(".popupresponse__right").append(newlist)
 	});
 
 }

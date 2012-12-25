@@ -22,6 +22,13 @@
 		show_popupresponse();
 	});
 	
+	$("#blago").click(function(){
+		show_popupresponse();
+	});
+	
+	$("#yabida").click(function(){
+		show_popupresponse();
+	});
 		
 		
 	});

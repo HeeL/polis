@@ -5,7 +5,9 @@ ActiveAdmin.register AdminUser do
     
   index do                            
     column :email   
-    column :role                  
+    column :role do |column|
+      t(column.role)
+      end              
     column :current_sign_in_at        
     column :last_sign_in_at           
     column :sign_in_count             
@@ -17,7 +19,7 @@ ActiveAdmin.register AdminUser do
   form do |f|                         
     f.inputs "Admin Details" do       
       f.input :email  
-      f.input :role, :collection => ['superadmin', 'admin', 'manager']               
+      f.input :role, :collection => Hash[AdminUser::ROLES.map{|role| [t(role),role]}]               
       f.input :password               
       f.input :password_confirmation  
     end                               
@@ -27,7 +29,9 @@ ActiveAdmin.register AdminUser do
   show do
     attributes_table do
       row :email
-      row :role
+      row :role do |row|
+         t(row.role)
+       end
       
       end
   end
