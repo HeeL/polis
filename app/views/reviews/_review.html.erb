@@ -10,12 +10,15 @@
 			<div class="popupresponse__line popupresponse__line-first clearfix"><label>Отделение</label>
 			<%= f.collection_select(:office_id, @offices, :id, :title) %></div>
 			<div id="doc" class="popupresponse__line clearfix">
-				
-		<input type="checkbox" /><label>Врач</label><%= f.grouped_collection_select(:doctor_id, @offices, :doctors, :title, :id, :name) %>
-				
+				<div class="doc">
+					<input type="checkbox" />
+					<label>Врач</label>
+					<%= f.grouped_collection_select(:doctor_id, @offices, :doctors, :title, :id, :name, {}, class: 'doctors' ) %>
 				</div>
+			</div>
+			<a href="" class="popupresponse__line-add" id="add_doctors">Еще один врач</a>
 		</div>			
-		<a href="javascript:;" class="popupresponse__line-add">Еще один врач</a>
+		
 	</div>
 	<div class="popupresponse__info clearfix">
 		<label>Представьтесь:</label>

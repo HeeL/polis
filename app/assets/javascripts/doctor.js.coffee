@@ -14,3 +14,4 @@ jQuery ->
     else
       $('#review_doctor_id').empty()
       $('#review_doctor_id').parent().hide()
+  $('#review_office_id').change()
