@@ -11,7 +11,7 @@
 			<%= f.collection_select(:office_id, @offices, :id, :title) %></div>
 			<div id="doc" class="popupresponse__line clearfix">
 				<div class="doc">
-					<input type="checkbox" />
+					<input type="checkbox" checked="checked"/>
 					<label>Врач</label>
 					<%= f.grouped_collection_select(:doctor_id, @offices, :doctors, :title, :id, :name, {}, class: 'doctors' ) %>
 				</div>
