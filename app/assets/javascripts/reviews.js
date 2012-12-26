@@ -15,11 +15,11 @@ $(document).ready(function() {
 		return false;
 	});
 
-	$(".response__menu-up").click(function(){
+	$(".response__menu-up, .i2, #blago").click(function(){
 		show_popupresponse(1);
 	});
 	
-	$(".response__menu-down").click(function(){
+	$(".response__menu-down, .i1, #yabida").click(function(){
 		show_popupresponse(2);
 	});
 	
@@ -27,22 +27,6 @@ $(document).ready(function() {
 		show_popupresponse(3);
 	});
 	
-	$(".i1").click(function(){
-		show_popupresponse();
-	});
-	
-	$(".i2").click(function(){
-		show_popupresponse();
-	});
-	
-	$("#blago").click(function(){
-		show_popupresponse();
-	});
-	
-	$("#yabida").click(function(){
-		show_popupresponse();
-	});
-		
 		
 	});
 
