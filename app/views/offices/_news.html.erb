@@ -1,6 +1,6 @@
 	<div class="address_right">
 		<div class="othernews">
-			<h2 class="othernews__title"></h2>
+			<h2 class="othernews__title-department"></h2>
 			<ul class="othernews__list">
 				<% @articles.each do |article| %>
 				<li><span><%= article.date %> | <%= Office.where(:id => article.office_id).first.title %></span><%= link_to article.title, article %></li>

@@ -11,8 +11,23 @@ function doc_scroll_top(){
     return 0;
 }
 
-function show_popupresponse()
+function show_popupresponse(popuptype)
 {
+	switch(popuptype)
+	{
+		// positive
+		case 1: $("#review_status option[value='Positive']").attr('selected', 'selected');
+				break;
+		// negative
+		case 2: $("#review_status option[value='Negative']").attr('selected', 'selected');
+				break;
+		// response
+		case 3: $("#review_status option[value='Review']").attr('selected', 'selected');
+				break;
+	}
+	
+	
+	
 	$('#shadow').css('height', $('body').height() + 'px');
 	$('#shadow').css('width', $('body').width() + 'px');
 	$('#shadow').show();		
@@ -25,41 +40,30 @@ function show_popupresponse()
 	{
 		$('.popupresponse').hide();	
 		$('#shadow').hide();	
-		
-		
+			
 	});
 	
-	
+	// обработка checked
+		function popup_check_doctor()
+		{
+			if ($(this).is(':checked'))
+				$(this).parent().find('select').prop('disabled', false);
+			else
+				$(this).parent().find('select').prop('disabled', true);
+
+		}
+
+		$(".popupresponse__line input").click(popup_check_doctor);
 
 	
 
-	//новый список
-
-	$(".popupresponse__line-add").click(function(){
-		
-		oldlist = $($('#review_doctor_id').html()) //старый список
-
-		selected = $('#review_doctor_id option:selected').html() //выбранный врач
-
-		newlist = oldlist.remove(selected);
-		
-		
-		$(".popupresponse__right").append(newlist)
-	});
+	
 
 }
 
 function on_resize()
 {		
-	var dy = 0;
-	if($('#body').size() > 0)
-	{
-		dy = $(window).height() - $('.header').height() - $('.body').height() - $('.footer').height() - 60 ;
-	}
-	else
-	{		
-		dy = $(window).height() - $('.header').height() - $('.home').height() - $('.footer').height() - 60;
-	}
+	var dy = $(window).height() - $('.header').height() - $('.body').height() - $('.footer').height() - 60 ;
 				
 	if (dy > 0)
 	{				
@@ -71,27 +75,49 @@ function on_resize()
 	}
 }
 
-function init_start_info()
+function start_info_next()
 {
-	$('.start__menu li').hover(function(){
-		if ($(this).hasClass('start__menu-selected'))
-			return false;
-		
-		$('.start__info-data-show').removeClass('start__info-data-show');
-		$('.start__menu-selected').removeClass('start__menu-selected');
-		
-		$(this).addClass('start__menu-selected');
-		$('.start__info-data-' + $(this).attr('id')).addClass('start__info-data-show');
-		
-		$('.start__text-position').removeClass('start__text-position-sm-i2').removeClass('start__text-position-sm-i3');
-		$('.start__text-position').addClass('start__text-position-' + $(this).attr('id'));
+	var elem = $('.start__menu-selected').next();
+	
+	if (elem.length == 0)
+		start_info_hover($('.start__menu li')[0]);		
+	else
+		start_info_hover(elem);
+					
+	setTimeout('start_info_next();', 8000);
+}
+
+function start_info_hover(elem)
+{
+	if ($(elem).hasClass('start__menu-selected'))
+		return false;
+			
+	$('.start__info-data-show').fadeOut(333, 0).removeClass('start__info-data-show');
+	$('.start__menu-selected').removeClass('start__menu-selected');
+	
+	$(elem).addClass('start__menu-selected');
+	$('.start__info-data-' + $(elem).attr('id')).fadeIn(333).addClass('start__info-data-show');
+	
+	$('.start__text-position').removeClass('start__text-position-sm-i2').removeClass('start__text-position-sm-i3');
+	$('.start__text-position').addClass('start__text-position-' + $(elem).attr('id'));
+}
+
+function start_info_init()
+{	
+	$('.start__menu li').click(function()
+	{
+		start_info_hover($(this));
+
 	});
+	
+	setTimeout('start_info_next();', 8000);
 }
 
 
 $(document).ready(function()
 {
-
+	$(window).bind('resize', on_resize);
+	on_resize();
 	
-	init_start_info();
+	start_info_init();
 });

@@ -16,15 +16,15 @@ $(document).ready(function() {
 	});
 
 	$(".response__menu-up").click(function(){
-		show_popupresponse();
+		show_popupresponse(1);
 	});
 	
 	$(".response__menu-down").click(function(){
-		show_popupresponse();
+		show_popupresponse(2);
 	});
 	
 	$(".response__menu-write").click(function(){
-		show_popupresponse();
+		show_popupresponse(3);
 	});
 	
 	$(".i1").click(function(){
