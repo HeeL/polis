@@ -12,10 +12,12 @@ jQuery ->
       $('#add_doctors').hide()
     else
       $('#add_doctors').show()
+    first = $('.doc:first').html()
+    $('.doc').remove();
+    $('#doc').append('<div class="doc">' + first + '</div>');
     if options
       $('#review_doctor_id').html(options)
       $('#review_doctor_id').parent().show()
     else
-      $('#review_doctor_id').empty()
       $('#review_doctor_id').parent().hide()
   $('#review_office_id').change()
