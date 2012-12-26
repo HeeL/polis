@@ -13,6 +13,8 @@ gem 'unicorn'
 gem 'execjs'
 gem 'therubyracer'
 
+gem 'thinking-sphinx', '2.0.10'
+
 group :production do  
 gem 'mysql2'
 end

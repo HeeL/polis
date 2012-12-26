@@ -3,4 +3,10 @@ class About < ActiveRecord::Base
   CATEGORIES = [ "About", "Usefull" ]
   validates :title, :description, presence: true
   validates :category, inclusion: CATEGORIES
+  
+  define_index do
+    indexes title
+    indexes description
+  end
+  
 end

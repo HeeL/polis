@@ -223,6 +223,7 @@ a.address__bottom-register:active{background-position: 0px -110px}
 .doctor__hours i{color: #c96e03; font: bold 16px/18px Tahoma; }
 a.doctor__register, a.doctor__register:link, a.doctor__register:visited{font: 14px/18px Tahoma; color: #555;}
 a.doctor__register:hover{color: #756bc7; text-decoration: underline;}
+.doc{margin-top: 7px;}
 
 /* address selector */
 .address__selector{background: url(address__selector.png) no-repeat; width: 539px; height: 43px; position: relative;}

@@ -4,4 +4,9 @@ class Article < ActiveRecord::Base
   
   has_attached_file :photo, :styles => { :content => "134x134!" }
   
+  define_index do
+    indexes title
+    indexes description
+  end
+  
 end

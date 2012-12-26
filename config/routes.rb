@@ -1,4 +1,7 @@
 Polisoms::Application.routes.draw do
+  get "search/search"
+  match '/search', to: 'search#search'
+
   get "static_pages/home"
 
   resources :reviews

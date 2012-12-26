@@ -8,10 +8,16 @@ jQuery ->
     office = $('#review_office_id :selected').text()
     escaped_office = office.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1')
     options = $(doctors).filter("optgroup[label='#{escaped_office}']").html()
+    if options.indexOf('option ', 10) == -1
+      $('#add_doctors').hide()
+    else
+      $('#add_doctors').show()
+    first = $('.doc:first').html()
+    $('.doc').remove();
+    $('#doc').append('<div class="doc">' + first + '</div>');
     if options
       $('#review_doctor_id').html(options)
       $('#review_doctor_id').parent().show()
     else
-      $('#review_doctor_id').empty()
       $('#review_doctor_id').parent().hide()
   $('#review_office_id').change()
