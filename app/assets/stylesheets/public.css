@@ -213,7 +213,7 @@ a.address__bottom-register:active{background-position: 0px -110px}
 .address_right{float: right; width: 220px;}
 
 /* doctors */
-.doctors{width: 650px; float: left; position: relative; height: 50px;}
+.doctors{width: 650px; float: left; position: relative; left: -15px;}
 .doctor{border-bottom: 1px dotted #afd141; padding: 0px 0px 25px 15px; margin: 0px 0px 20px 0px;}
 .doctor__last{border: none;}
 .doctor__name{display: block; color: #6d8ded; font: 32px/32px 'Conv_PFDinTextCondPro-Light';}
