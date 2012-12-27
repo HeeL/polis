@@ -1,8 +1,7 @@
 class StaticPagesController < ApplicationController
   def home
-    @offices = Office.all
-    @doctors = Doctor.all
-    @review = Review.new(params[:review])
+    @review = Review.new
+    @office_select = Office.all
     @articles = Article.limit(3)
   end
 end

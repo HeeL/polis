@@ -5,8 +5,7 @@ class ReviewsController < ApplicationController
     reviews = Review.where(:check => true)
     @reviews = reviews.paginate(:page => params[:page], :per_page => 6).order('created_at DESC')
     @review = Review.new
-    @offices = Office.all
-    @doctors = Doctor.all
+    @office_select = Office.all
       
     respond_to do |format|
       format.html # index.html.erb

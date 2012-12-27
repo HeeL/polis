@@ -6,6 +6,8 @@ class OfficesController < ApplicationController
     @office = Office.first
     @doctors = Doctor.where(:office_id => @office.id).all
     @articles = Article.where(:office_id => @office.id).all
+    @review = Review.new
+    @office_select = Office.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -20,6 +22,8 @@ class OfficesController < ApplicationController
     @office = Office.find(params[:id])
     @doctors = Doctor.where(:office_id => @office.id).all
     @articles = Article.where(:office_id => @office.id).all
+    @review = Review.new
+    @office_select = Office.all
 
     respond_to do |format|
       format.html # show.html.erb

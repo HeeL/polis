@@ -8,12 +8,12 @@
 			<%= f.select(:status, options_for_select([['Поблагодарить', 'Positive'], ['Пожаловаться', 'Negative'], ['Оставить отзыв', 'Review']])) %></div>
 		<div class="popupresponse__right">
 			<div class="popupresponse__line popupresponse__line-first clearfix"><label>Отделение</label>
-			<%= f.collection_select(:office_id, @offices, :id, :title) %></div>
+			<%= f.collection_select(:office_id, @office_select, :id, :title) %></div>
 			<div id="doc" class="popupresponse__line clearfix">
 				<div class="doc">
 					<input type="checkbox" checked="checked"/>
 					<label>Врач</label>
-					<%= f.grouped_collection_select(:doctor_id, @offices, :doctors, :title, :id, :name, {}, class: 'doctors' ) %>
+					<%= f.grouped_collection_select(:doctor_id, @office_select, :doctors, :title, :id, :name, {}, class: 'doctors' ) %>
 				</div>
 			</div>
 			<a href="" class="popupresponse__line-add" id="add_doctors">Еще один врач</a>
