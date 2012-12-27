@@ -15,6 +15,7 @@ jQuery ->
     first = $('.doc:first').html()
     $('.doc').remove();
     $('#doc').append('<div class="doc">' + first + '</div>');
+    $('#doc').css('height', '50px')
     if options
       $('#review_doctor_id').html(options)
       $('#review_doctor_id').parent().show()
