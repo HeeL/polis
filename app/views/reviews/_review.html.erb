@@ -13,9 +13,10 @@
 				<div class="doc">
 					<input type="checkbox" checked="checked"/>
 					<label>Врач</label>
-					<%= f.grouped_collection_select(:doctor_id, @office_select, :doctors, :title, :id, :name, {}, class: 'doctors' ) %>
+					<%= f.grouped_collection_select(:doctor_id, @office_select, :doctors, :title, :id, :name, {}, class: 'doctors-select' ) %>
 				</div>
 			</div>
+
 			<a href="" class="popupresponse__line-add" id="add_doctors">Еще один врач</a>
 		</div>			
 		
