@@ -16,15 +16,16 @@ ActiveAdmin.register Review do
 		Office.where(:id => column.office_id).first.title
 			end
     end
-    column :doctor_id do |column|
-      unless column.doctor_id.blank?
-		Doctor.where(:id => column.doctor_id).first.name
-			end
-    end
     column :description do |column|
       truncate(strip_tags(column.description), length: 200)
     end
     column :author
+    column :doctors do |review|
+      unless review.doctors.blank?
+      array = review.doctors.split(",").map { |id| Doctor.where(:id => id).first.name }.to_s.gsub('"', '')
+  end
+  end
+    
     column :contact
     column :created_at
     column :check
