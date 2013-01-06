@@ -22,7 +22,7 @@ ActiveAdmin.register Review do
     column :author
     column :doctors do |review|
       unless review.doctors.blank?
-      array = review.doctors.split(",").map { |id| Doctor.where(:id => id).first.name }.to_s.gsub('"', '').to_s.gsub('[', '').to_s.gsub(']', '')
+      review.doctors.split(",").map { |id| Doctor.where(:id => id).first.name }.join(', ')
   end
   end
     

@@ -6,17 +6,15 @@
 		<li><a href="http://gorzdrav.spb.ru">как записаться<br/>на прием?</a></li>
 		<li class="start__faq-item-last"><a href="http://gorzdrav.spb.ru">что взять с собой<br/>на прием?</a></li>
 	</ul>
-	<div class="start__news clearfix">
+	<div class="start__news">
 		<h3 class="start__news-title">Новости</h3>
-		<ul class="start__news-list">
+		<ul class="clearfix">
 				<% @articles.each do |article| %>
 			    <li><%= link_to article.title, article %>
 				<p><%= truncate(strip_tags(article.description), length: 200) %></p></li>
 				<% end %>
 		</ul>
-		
 		<%= link_to "все новости", articles_path, :class => 'start__news-all' %>
-		
 	</div>
 </div>
 
