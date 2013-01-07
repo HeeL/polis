@@ -15,8 +15,3 @@
 //= require jquery_ujs
 //= require_tree .
 //= require ckeditor/init
-
-$(document).ready(function()
-{
-	$('.popupthankyou').hide();
-});
