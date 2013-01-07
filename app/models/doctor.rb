@@ -3,9 +3,7 @@ class Doctor < ActiveRecord::Base
   belongs_to :office
   has_many :reviews
   
-  define_index do
-    indexes :name
-  end
+
   
   
 end
