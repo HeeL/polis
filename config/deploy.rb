@@ -12,7 +12,6 @@
 # закомментируйте эту строку.
 require 'bundler/capistrano'
 
-require 'thinking_sphinx/deploy/capistrano'
 
 ## Чтобы не хранить database.yml в системе контроля версий, поместите
 ## dayabase.yml в shared-каталог проекта на сервере и раскомментируйте
@@ -114,15 +113,3 @@ namespace :deploy do
 end
 
 
-before 'deploy:update_code', 'thinking_sphinx:stop'
-after 'deploy:update_code', 'thinking_sphinx:start'
-after 'deploy:update_code', 'thinking_sphinx:rebuild'
-
-namespace :sphinx do
-  desc "Symlink Sphinx indexes"
-  task :symlink_indexes, :roles => [:app] do
-    run "ln -nfs #{shared_path}/db/sphinx #{release_path}/db/sphinx"
-  end
-end
-
-after 'deploy:finalize_update', 'sphinx:symlink_indexes'
