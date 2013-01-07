@@ -321,8 +321,8 @@ input.popupresponse__submit, input.popupresponse__submit:link, input.popuprespon
 a.popupresponse__submit:hover{background-position: 0px -35px;}
 
 /* popup thankyou */
-.popupthankyou{z-index: 100; position: absolute; width: 700px; height: 290px; padding: 200px 0px 0px 0px; text-align: center; background: #fff; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;}
-.popupthankyou__close{display: block; position: absolute; top: 20px; right: 20px; width: 16px; height: 16px; background: url(../images/popupresponse__close.png) no-repeat;}
+.popupthankyou{z-index: 300; position: absolute; width: 700px; height: 290px; padding: 200px 0px 0px 0px; text-align: center; background: #fff; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;}
+.popupthankyou__close{display: block; position: absolute; top: 20px; right: 20px; width: 16px; height: 16px; background: url(popupresponse__close.png) no-repeat;}
 .popupthankyou__close:hover{background-position: 0px -16px;}
 .popupthankyou__text{font: 26px/32px Tahoma;}
 
