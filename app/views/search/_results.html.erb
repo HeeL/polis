@@ -1,0 +1,10 @@
+<div class="body__data" style="margin-bottom: 30px">	
+	<h1 class="results__title">Результаты поиска</h1>
+	<h3 class="results__for">Вы искали: <%= @search %></h3>
+	<ul class="results">
+		
+		<% for search in @results %>
+		<li><%= link_to search.title, url_for(search) %><p><%= truncate(strip_tags(search.description), length: 400) %></p></li>	
+		<% end %>		
+	</ul>
+</div>
