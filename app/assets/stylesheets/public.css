@@ -86,7 +86,7 @@ a:hover{text-decoration: none; }
 .footer__section{float: left; width: 320px;}
 .footer__section-last{width: 290px;}
 
-.footer__copy{font: 14px/16px Tahoma; color: #1d2932; padding: 0px 0px 20px 0px;}
+.footer__copy{font: 14px/16px Tahoma; color: #1d2932; padding: 0px 0px 20px 0px; }
 .footer__search{width: 210px; height: 27px; padding: 5px 0px 0px 10px; background: url(footer__search.png) no-repeat; position: relative;}
 .footer__search-input{border: none; display: block; height: 20px; font: 12px/20px Tahoma; color: #1d2932; padding: 0px; margin: 0px; width: 170px; background: none;}
 .footer__search-submit{position: absolute; width: 30px; height: 25px; display: block; right: 8px; top: 3px; }
@@ -291,7 +291,7 @@ a.start__info-link, a.start__info-link:link, a.start__info-link:visited{padding:
 a.start__news-all, a.start__news-all:link, a.start__news-all:visited{text-align: right; display: block; padding: 40px 0px 0px 0px;}
 
 /* popupresponse */
-.popupresponse{position: absolute; width: 650px; padding: 15px 25px 30px 25px; z-index: 300; font: 13px/16px Arial; color: #333; background: #f5f5f5;  -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;}
+.popupresponse{position: absolute; width: 650px; padding: 15px 25px 30px 25px; z-index: 300; font: 13px/16px Arial; color: #333; background: #f5f5f5; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;}
 .popupresponse__title{height: 30px; font: 26px/30px Tahoma; color: #555555; padding: 0px 0px 0px 0px;}
 .popupresponse__close{display: block; position: absolute; top: 20px; right: 20px; width: 16px; height: 16px; background: url(popupresponse__close.png) no-repeat;}
 .popupresponse__close:hover{background-position: 0px -16px;}
@@ -332,7 +332,7 @@ a.popupresponse__submit:hover{background-position: 0px -35px;}
 .results{list-style: decimal outside; color: #797c80; font: 14px/16px Tahoma;}
 .results li{list-style: decimal outside; color: #797c80; font: 14px/16px Tahoma; padding: 0px 0px 10px 0px;}
 .results p{color: #797c80; font: 14px/16px Tahoma;}
-.results a, .results a:link, .results a:visited{color: #6d8ded; font; 14px/16px Tahoma;}
+.results a, .results a:link, .results a:visited{color: #6d8ded; font: 14px/16px Tahoma;}
 .results a:hover{color: #756bc7; text-decoration: underline;}
 
 /* search left menu */
