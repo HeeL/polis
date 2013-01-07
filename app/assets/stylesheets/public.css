@@ -338,7 +338,7 @@ a.popupresponse__submit:hover{background-position: 0px -35px;}
 /* search left menu */
 .search__leftmenu{padding: 67px 0px 0px 0px;}
 .search__leftmenu-title{display: block; color: #919599; font: 14px/16px Tahoma; padding: 0px 0px 25px 13px;}
-.search__leftmenu-form{background: url(../images/search__leftmenu.png) no-repeat; padding: 5px 0px 0px 10px; width: 200px; height: 27px; position: relative;}
+.search__leftmenu-form{background: url(search__leftmenu.png) no-repeat; padding: 5px 0px 0px 10px; width: 200px; height: 27px; position: relative;}
 .search__leftmenu-input{border: none; display: block; height: 20px; font: 12px/20px Tahoma; color: #919599; padding: 0px; margin: 0px; width: 160px; background: none;}
 .search__leftmenu-submit{position: absolute; width: 30px; height: 25px; display: block; right: 8px; top: 3px; }
 
