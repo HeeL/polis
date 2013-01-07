@@ -15,3 +15,11 @@
 //= require jquery_ujs
 //= require_tree .
 //= require ckeditor/init
+
+$(document).ready(function()
+{
+	$(window).bind('resize', on_resize);
+	on_resize();
+	
+	start_info_init();
+});
