@@ -38,26 +38,25 @@ function show_popupresponse(popuptype)
 	$(".popupresponse").css('top', doc_scroll_top() + 100 + 'px');			
 	$(".popupresponse").show();	
 	
-
 	
-	$(".popupresponse__submit").click(function()
+	$(".popupresponse__submit, #shadow, .popupresponse__close").click(function()
 	{
 		$('.popupresponse').hide();			
+		
+		$(".popupthankyou").css('left', parseInt(($('body').width() - $(".popupthankyou").width()) / 2) + 'px');
+		$(".popupthankyou").css('top', doc_scroll_top() + 100 + 'px');			
 
-				$(".popupthankyou").css('left', parseInt(($('body').width() - $(".popupthankyou").width()) / 2) + 'px');
-				$(".popupthankyou").css('top', doc_scroll_top() + 100 + 'px');			
-
-				$('.popupthankyou').show();	
-
-				$('.popupthankyou__close').click(function()
-				{
-					$('.popupthankyou').hide();	
-					$('#shadow').hide();	
-					
-				});
-
-				
-			});
+		$('.popupthankyou').show();	
+		
+		$('.popupthankyou__close').click(function()
+		{
+			$('.popupthankyou').hide();	
+			$('#shadow').hide();	
+			
+		});
+		
+		
+	});
 	
 	// обработка checked
 		function popup_check_doctor()
