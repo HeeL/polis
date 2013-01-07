@@ -4,7 +4,7 @@ class Doctor < ActiveRecord::Base
   has_many :reviews
   
   define_index do
-    indexes name
+    indexes :name
   end
   
   

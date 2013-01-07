@@ -4,3 +4,4 @@ test:
   port: 9313
 production:
   port: 2393
+html_strip: true

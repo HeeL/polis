@@ -1,10 +1,10 @@
 <div class="footer clearfix"><div class="footer-inner"> 
 	<div class="footer__section">
 		<p class="footer__copy">&copy; Полис. Участковые врачи</p>
-		<div class="footer__search"><form action="#">
-			<input type="text" class="footer__search-input" value="поиск по сайту" onclick="control_in(this, 'поиск по сайту');" onblur="control_out(this, 'поиск по сайту');"/>
+		<div class="footer__search"><form accept-charset="UTF-8" action="/search" method="get">
+			<input type="text" class="footer__search-input" name="search" value="поиск по сайту" onclick="control_in(this, 'поиск по сайту');" onblur="control_out(this, 'поиск по сайту');"/>
 			<!-- 2013.01.06 добавлена кнопка -->
-			<a href="#" class="footer__search-submit"></a>
+			<button class="footer__search-submit" type="submit"></button>
 		</form></div>
 	</div>
 	<div class="footer__section">
