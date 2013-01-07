@@ -20,7 +20,7 @@ ActiveAdmin.register Doctor do
      f.inputs do
      f.input :name
      f.input :job
-     f.input :schedule, :as => :ckeditor, :label => false, :input_html => { :toolbar => 'Easy' }
+     f.input :schedule, :as => :ckeditor, :label => false, :input_html => { :toolbar => 'Pure' }
      f.input :office_id, :as => :select, :collection => Office.all
    end
    f.buttons

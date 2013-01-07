@@ -87,8 +87,9 @@ a:hover{text-decoration: none; }
 .footer__section-last{width: 290px;}
 
 .footer__copy{font: 14px/16px Tahoma; color: #1d2932; padding: 0px 0px 20px 0px;}
-.footer__search{width: 210px; height: 27px; padding: 5px 0px 0px 10px; background: url(footer__search.png) no-repeat;}
+.footer__search{width: 210px; height: 27px; padding: 5px 0px 0px 10px; background: url(footer__search.png) no-repeat; position: relative;}
 .footer__search-input{border: none; display: block; height: 20px; font: 12px/20px Tahoma; color: #1d2932; padding: 0px; margin: 0px; width: 170px; background: none;}
+.footer__search-submit{position: absolute; width: 30px; height: 25px; display: block; right: 8px; top: 3px; }
 
 
 .footer__menu a, .footer__menu a:link, .footer__menu a:visited{font: 12px/14px Tahoma; color: #1d2932; text-decoration: none;}
@@ -244,7 +245,7 @@ a.address__selector-label, a.address__selector-label:link, a.address__selector-l
 .start__info-text{color: #0056a5; font: 23px/28px 'Conv_PFDinTextCondPro-Regular'; padding: 0px 0px 20px 0px;}
 a.start__info-link, a.start__info-link:link, a.start__info-link:visited{padding: 0px 0px 0px 20px; background: url(start__info_link.png) no-repeat 0px 4px; display: block; position: absolute; left: 50px; bottom: 60px; color: #6d8ded; font: 16px/18px 'Conv_PFDinTextCondPro-Regular';}
 
-.start__info-data{height: 330px; width: 600px; padding: 40px 50px 0px 50px; position: absolute; left: 0px; top: 0px; display: none;}
+.start__info-data{height: 290px; width: 600px; padding: 40px 50px 0px 50px; position: absolute; left: 0px; top: 0px; display: none;}
 .start__info-data-show{display: block;}
 
 .start__info-data-sm-i2{background: url(start__info_data_i2.jpg) no-repeat;}
@@ -317,4 +318,27 @@ a.popupresponse__line-add:hover{color: #9a95c8; background-position: 9px -16px; 
 .popupresponse textarea{width: 630px; height: 54px; padding: 2px 4px; margin: 0px 0px 12px 0px; border: 1px solid #ccc; font: 13px/16px Arial;}
 
 input.popupresponse__submit, input.popupresponse__submit:link, input.popupresponse__submit:visited{font: 16px/35px 'Conv_PFDinTextCondPro-Regular'; color: #555; text-align: center; display: block; width: 183px; height: 35px; border: none !important; padding: 0px !important; background: url(popupresponse__submit.png) no-repeat; text-decoration: none;}
-input.popupresponse__submit:hover{background-position: 0px -35px;}
+a.popupresponse__submit:hover{background-position: 0px -35px;}
+
+/* popup thankyou */
+.popupthankyou{z-index: 100; position: absolute; width: 700px; height: 290px; padding: 200px 0px 0px 0px; text-align: center; background: #fff; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;}
+.popupthankyou__close{display: block; position: absolute; top: 20px; right: 20px; width: 16px; height: 16px; background: url(../images/popupresponse__close.png) no-repeat;}
+.popupthankyou__close:hover{background-position: 0px -16px;}
+.popupthankyou__text{font: 26px/32px Tahoma;}
+
+/* search results */
+.results__title{color: #756bc7; font: 52px/52px 'Conv_reformagroteskmedium'; text-transform: uppercase; padding: 40px 0px 40px 0px;}
+.results__for{display: block; color: #797c80; font: 14px/16px Tahoma; padding: 0px 0px 5px 0px;}
+.results{list-style: decimal outside; color: #797c80; font: 14px/16px Tahoma;}
+.results li{list-style: decimal outside; color: #797c80; font: 14px/16px Tahoma; padding: 0px 0px 10px 0px;}
+.results p{color: #797c80; font: 14px/16px Tahoma;}
+.results a, .results a:link, .results a:visited{color: #6d8ded; font; 14px/16px Tahoma;}
+.results a:hover{color: #756bc7; text-decoration: underline;}
+
+/* search left menu */
+.search__leftmenu{padding: 67px 0px 0px 0px;}
+.search__leftmenu-title{display: block; color: #919599; font: 14px/16px Tahoma; padding: 0px 0px 25px 13px;}
+.search__leftmenu-form{background: url(../images/search__leftmenu.png) no-repeat; padding: 5px 0px 0px 10px; width: 200px; height: 27px; position: relative;}
+.search__leftmenu-input{border: none; display: block; height: 20px; font: 12px/20px Tahoma; color: #919599; padding: 0px; margin: 0px; width: 160px; background: none;}
+.search__leftmenu-submit{position: absolute; width: 30px; height: 25px; display: block; right: 8px; top: 3px; }
+

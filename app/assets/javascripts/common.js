@@ -40,10 +40,22 @@ function show_popupresponse(popuptype)
 	
 	$(".popupresponse__submit, #shadow, .popupresponse__close").click(function()
 	{
-		$('.popupresponse').hide();	
-		$('#shadow').hide();	
-			
-	});
+		$('.popupresponse').hide();			
+
+				$(".popupthankyou").css('left', parseInt(($('body').width() - $(".popupthankyou").width()) / 2) + 'px');
+				$(".popupthankyou").css('top', doc_scroll_top() + 100 + 'px');			
+
+				$('.popupthankyou').show();	
+
+				$('.popupthankyou__close').click(function()
+				{
+					$('.popupthankyou').hide();	
+					$('#shadow').hide();	
+					
+				});
+
+				
+			});
 	
 	// обработка checked
 		function popup_check_doctor()
@@ -118,6 +130,7 @@ function start_info_init()
 
 $(document).ready(function()
 {
+	$('.popupthankyou').hide();
 	$(window).bind('resize', on_resize);
 	on_resize();
 	
