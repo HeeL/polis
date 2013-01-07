@@ -38,11 +38,7 @@ function show_popupresponse(popuptype)
 	$(".popupresponse").css('top', doc_scroll_top() + 100 + 'px');			
 	$(".popupresponse").show();	
 	
-	$(".popupresponse__close").click(function()
-	{
-		$('.popupresponse').hide();	
-		$('#shadow').hide();
-	});
+
 	
 	$(".popupresponse__submit").click(function()
 	{
