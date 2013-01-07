@@ -38,7 +38,13 @@ function show_popupresponse(popuptype)
 	$(".popupresponse").css('top', doc_scroll_top() + 100 + 'px');			
 	$(".popupresponse").show();	
 	
-	$(".popupresponse__submit, #shadow, .popupresponse__close").click(function()
+	$(".popupresponse__close").click(function()
+	{
+		$('.popupresponse').hide();	
+		$('#shadow').hide();
+	});
+	
+	$(".popupresponse__submit").click(function()
 	{
 		$('.popupresponse').hide();			
 
@@ -130,7 +136,6 @@ function start_info_init()
 
 $(document).ready(function()
 {
-	$('.popupthankyou').hide();
 	$(window).bind('resize', on_resize);
 	on_resize();
 	
