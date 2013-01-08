@@ -14,12 +14,12 @@
 		<ul class="responses">
 			<% @reviews.each do |review| %>
 			<li>
-				<b><%= review.author %></b><span><%= review.created_at.strftime("%d.%m.%Y %H:%M") %> 
+				<b><%= review.author %></b><span><%= review.created_at.strftime("%d.%m.%Y") %> 
 					<% unless review.office_id.blank? %>
 				| Отделение: <%= Office.where(:id => review.office_id).first.title %>
 					<% end %>
-					<% unless review.doctor_id.blank? %>
-				| Врач: <%= Doctor.where(:id => review.doctor_id).first.name %>
+					<% unless review.doctors.blank? %>
+				| Врач: <%= review.doctors.split(",").map { |id| Doctor.where(:id => id).first.name }.join(', ') %>
 					<% end %> 
 					</span>
 					<p><%= review.description %></p> 
