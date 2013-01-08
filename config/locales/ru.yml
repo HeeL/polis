@@ -33,9 +33,12 @@ ru:
       doctor:
         name: "ФИО"
         job: "Должность"
-        schedule: "Прием"
         office_id: "Отделение"
         office: "Пункт"
+        status: "В отпуске?"
+        otpusk: "Отпуск"
+        priem1: "Прием1"
+        priem2: "Прием2"
       about:
         title: "Заголовок"
         description: "Текст"

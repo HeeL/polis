@@ -42,6 +42,8 @@ CKEDITOR.stylesSet.add( 'my_styles',
 [
     // Block-level styles
     { name : 'Заголовок', element : 'h2', styles : { 'color' : 'Blue' }, attributes : { 'class' : 'newsdata__title' } },
-    { name : 'Текст' , element : 'p', styles : { 'color' : '#797C80' } }
+    { name : 'Текст' , element : 'p', styles : { 'color' : '#797C80' } },
+	{ name : 'Врач в отпуске', element : 'i', styles : { 'color' : '#C96E03' }, attributes : { 'class' : 'doctor__hours' } }
+
 
 ]);

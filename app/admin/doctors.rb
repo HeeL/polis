@@ -8,7 +8,11 @@ ActiveAdmin.register Doctor do
     index do 
      column :name
      column :job
-     column :schedule
+     column :status
+     column :otpusk
+     column :priem1
+     column :priem2
+          
      column :office_id do |column|
         Office.where(:id => column.office_id).first.title
       end
@@ -20,7 +24,10 @@ ActiveAdmin.register Doctor do
      f.inputs do
      f.input :name
      f.input :job
-     f.input :schedule, :as => :ckeditor, :label => false, :input_html => { :toolbar => 'Full' }
+     f.input :status
+     f.input :otpusk
+     f.input :priem1
+     f.input :priem2
      f.input :office_id, :as => :select, :collection => Office.all
    end
    f.buttons
@@ -30,9 +37,10 @@ ActiveAdmin.register Doctor do
          attributes_table do
            row :name
            row :job
-           row :schedule do |doctor|
-             sanitize doctor.schedule
-           end
+           row :status
+           row :otpusk
+           row :priem1
+           row :priem2
            row :office_id do
              Office.where(:id => doctor.office_id).first.title
            end
