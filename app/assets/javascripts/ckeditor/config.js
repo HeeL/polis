@@ -41,7 +41,7 @@ config.stylesSet = 'my_styles';
 CKEDITOR.stylesSet.add( 'my_styles',
 [
     // Block-level styles
-    { name : 'Заголовок', element : 'h2', styles : { 'color' : 'Blue' } },
-    { name : 'Текст' , element : 'p', styles : { 'color' : '#797C80' } },
+    { name : 'Заголовок', element : 'h2', styles : { 'color' : 'Blue' }, attributes : { 'class' : 'newsdata__title' } },
+    { name : 'Текст' , element : 'p', styles : { 'color' : '#797C80' } }
 
 ]);
