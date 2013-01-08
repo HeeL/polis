@@ -35,7 +35,7 @@ ActiveAdmin.register Article do
      f.input :photo, :as => :file
      f.input :date
      f.input :office_id, :as => :select, :collection => Office.all
-     f.input :description, :as => :ckeditor, :label => false, :input_html => { :toolbar => 'Easy' }
+     f.input :description, :as => :ckeditor, :label => false, :input_html => { :toolbar => 'Full' }
    end
    f.buttons
   end

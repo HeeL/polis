@@ -14,8 +14,8 @@
 //= require_self
 //= require jquery_ujs
 //= require ckeditor/init
-//= require ckeditor/config
 //= require_tree .
+
 
 $(document).ready(function()
 {
