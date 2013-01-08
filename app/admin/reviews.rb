@@ -40,6 +40,32 @@ ActiveAdmin.register Review do
     f.buttons
    end
   
+  
+    show do
+           attributes_table do
+             row :status
+             
+             row :office_id do |row|
+               unless row.office_id.blank?
+         		Office.where(:id => row.office_id).first.title
+         			end
+             end
+             
+             row :description do |row|
+               truncate(strip_tags(row.description), length: 200)
+             end
+             
+             row :author
+              
+               row :doctors do |row|
+                 unless row.doctors.blank?
+                 row.doctors.split(",").map { |id| Doctor.where(:id => id).first.name }.join(', ')
+             end
+             end
+             
+            end
+  
+          end 
 end
 
 

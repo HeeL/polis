@@ -66,6 +66,7 @@ ru:
         status: "Тип"
         created_at: "Создан"
         check: "Проверен"
+        doctors: "Доктора"
   active_admin:
     dashboard: Dashboard
     dashboard_welcome:
