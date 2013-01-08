@@ -28,6 +28,8 @@ ru:
         current_sign_in_at: "Вход"
         last_sign_in_at: "Последний вход"
         sign_in_count: "Сколько раз заходил"
+        password: "Пароль"
+        password_confirmation: "Подтверждение пароля"
       doctor:
         name: "ФИО"
         job: "Должность"

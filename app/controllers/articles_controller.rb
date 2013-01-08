@@ -22,8 +22,8 @@ class ArticlesController < ApplicationController
   # GET /articles/1.json
   def show
     @article = Article.find(params[:id])
-    other = Article.where('id != ?', @article.id)
-    @other = other.where(:office_id => @article.office_id).limit(3)
+    @other = Article.where('id != ?', @article.id).limit(3)
+    
 
     respond_to do |format|
       format.html # show.html.erb
