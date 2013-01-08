@@ -13,9 +13,9 @@
 //= require jquery
 //= require_self
 //= require jquery_ujs
-//= require_tree .
 //= require ckeditor/init
 //= require ckeditor/config
+//= require_tree .
 
 $(document).ready(function()
 {
