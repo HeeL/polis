@@ -13,14 +13,9 @@
 		</div>
 		<!-- end data left-->
 		<!-- body right -->
-		<div class="body__right">	
-			<div class="othernews">
-				<h2 class="othernews__title"></h2>
-				<ul class="othernews__list">
-				<% @other.each do |article| %>
-					<li><span><%= article.date %> | <%= Office.where(:id => article.office_id).first.title %></span><%= link_to article.title, article %></li>
-				<% end %>
-				</ul>
-			</div>
-		</div>
+		<%= if @other.empty?
+		nil
+		else
+		render 'othernews'
+		end %>
 	</div>
