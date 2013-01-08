@@ -22,4 +22,10 @@ $(document).ready(function()
 	on_resize();
 	
 	start_info_init();
+	
+	$(document).keyup(function(e) {
+	  if (e.keyCode == 27) { $('.footer__search-input').blur(); }   // esc
+	});
+	
+	
 });
