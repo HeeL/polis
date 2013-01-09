@@ -18,7 +18,7 @@ ActiveAdmin.register Service do
    form :html => { :enctype => "multipart/form-data" } do |f|
      f.inputs do
      f.input :title
-     f.input :description, :as => :ckeditor, :label => false, :input_html => { :toolbar => 'Easy' }
+     f.input :description, :as => :ckeditor, :label => false, :input_html => { :toolbar => 'Full' }
      f.input :appointment
    end
    f.buttons

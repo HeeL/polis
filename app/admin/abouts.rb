@@ -21,7 +21,7 @@ ActiveAdmin.register About do
      f.inputs do
      f.input :title
      f.input :category, :as => :radio, :collection => Hash[About::CATEGORIES.map{|b| [t(b),b]}]
-     f.input :description, :as => :ckeditor, :label => false, :input_html => { :toolbar => 'Easy' }
+     f.input :description, :as => :ckeditor, :label => false, :input_html => { :toolbar => 'Full' }
    end
    f.buttons
   end
