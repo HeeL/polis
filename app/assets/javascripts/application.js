@@ -25,7 +25,10 @@ $(document).ready(function()
 	start_info_init();
 	
 	$(document).keyup(function(e) {
-	  if (e.keyCode == 27) { $('.footer__search-input').blur(); }   // esc
+	  if (e.keyCode == 27) { 
+		$('.footer__search-input').blur();
+		$('.popupresponse, #shadow, .popupthankyou').hide();
+		 }   // esc
 	});
 	
 	

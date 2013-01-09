@@ -38,8 +38,20 @@ function show_popupresponse(popuptype)
 	$(".popupresponse").css('top', doc_scroll_top() + 100 + 'px');			
 	$(".popupresponse").show();	
 	
+	$("#shadow, .popupresponse__close").click(function()
+	{
+		$('.popupresponse').hide();			
+		
+		$(".popupthankyou").css('left', parseInt(($('body').width() - $(".popupthankyou").width()) / 2) + 'px');
+		$(".popupthankyou").css('top', doc_scroll_top() + 100 + 'px');			
+
+		$('#shadow').hide();
+		$('.popupthankyou').hide();	
+			
+		});
+		
 	
-	$(".popupresponse__submit, #shadow, .popupresponse__close").click(function()
+	$(".popupresponse__submit").click(function()
 	{
 		$('.popupresponse').hide();			
 		
@@ -54,8 +66,7 @@ function show_popupresponse(popuptype)
 			$('#shadow').hide();	
 			
 		});
-		
-		
+				
 	});
 	
 	// обработка checked
