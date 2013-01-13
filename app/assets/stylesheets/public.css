@@ -243,7 +243,7 @@ a.address__selector-label, a.address__selector-label:link, a.address__selector-l
 .start__info{width: 700px;  position: relative; height: 330px;}
 .start__info-title{color: #505c66; font: 52px/52px 'Conv_reformagroteskmedium'; text-transform: uppercase; padding: 0px 0px 25px 0px;}
 .start__info-text{color: #0056a5; font: 23px/28px 'Conv_PFDinTextCondPro-Regular'; padding: 0px 0px 20px 0px;}
-a.start__info-link, a.start__info-link:link, a.start__info-link:visited{padding: 0px 0px 0px 20px; background: url(start__info_link.png) no-repeat 0px 4px; display: block; position: absolute; left: 50px; bottom: 60px; color: #6d8ded; font: 16px/18px 'Conv_PFDinTextCondPro-Regular';}
+a.start__info-link, a.start__info-link:link, a.start__info-link:visited{padding: 0px 0px 0px 20px; background: url(start__info_link.png) no-repeat 0px 4px; display: block; position: absolute; left: 50px; bottom: 30px; color: #6d8ded; font: 16px/18px 'Conv_PFDinTextCondPro-Regular';}
 
 .start__info-data{height: 290px; width: 600px; padding: 40px 50px 0px 50px; position: absolute; left: 0px; top: 0px; display: none;}
 .start__info-data-show{display: block;}
