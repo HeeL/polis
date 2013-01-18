@@ -102,8 +102,8 @@ a.footer__logo, a.footer__logo:link, a.footer__logo:visited{position: absolute; 
 
 .left__menu-title{color: #919599; font: 16px/24px 'Conv_PFDinTextCondPro-Regular', Tahoma; padding: 31px 0px 9px 0px;}
 .left__menu li{padding: 0px 0px 9px 15px; position: relative; left: -15px;}
-.left__menu li.left__menu-selected{background: url(left__menu_selected.png) no-repeat 0px 2px; }
-.left__menu a, .left__menu a:link, .left__menu a:visited{color: #6d8ded; font: 16px/24px 'Conv_PFDinTextCondPro-Regular', Tahoma; text-decoration: none; line-height: 1}
+.left__menu li.left__menu-selected{background: url(left__menu_selected.png) no-repeat 0px 4px; }
+.left__menu a, .left__menu a:link, .left__menu a:visited{color: #6d8ded; font: 16px/24px 'Conv_PFDinTextCondPro-Regular', Tahoma; text-decoration: none; line-height: 1.3;}
 .left__menu a:hover{text-decoration: underline;}
 
 .left__menu li
