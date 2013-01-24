@@ -18,7 +18,7 @@
 			<div class="text text__noline">
 				<h1 class="text__title"><%= @service.title %></h1>
 				<%= sanitize @service.description %>
-				<% if @service.appointment != nil %>
+				<% unless @service.appointment.blank? %>
 				<%= render 'button' %>	
 				<% end %>	
 			</div>

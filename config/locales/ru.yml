@@ -37,8 +37,8 @@ ru:
         office: "Пункт"
         status: "В отпуске?"
         otpusk: "Отпуск"
-        priem1: "Прием1"
-        priem2: "Прием2"
+        priem1: "Прием строка 1"
+        priem2: "Прием строка 2"
       about:
         title: "Заголовок"
         description: "Текст"
