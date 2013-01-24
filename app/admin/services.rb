@@ -27,8 +27,8 @@ ActiveAdmin.register Service do
    show do
          attributes_table do
            row :title
-           row :description do
-             truncate(strip_tags(service.description), length: 800)  
+           row :description do |row|
+             sanitize row.description
            end
            row :appointment
          end

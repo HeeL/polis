@@ -117,8 +117,8 @@ a.footer__logo, a.footer__logo:link, a.footer__logo:visited{position: absolute; 
 .text__title{color: #756bc7; font: 52px/52px 'Conv_reformagroteskmedium', Tahoma; text-transform: uppercase; padding: 0px 0px 30px 0px;}
 .text__subtitle{color: #6d8ded; font: 32px/32px 'Conv_PFDinTextCondPro-Light', Tahoma; padding: 0px 0px 10px 0px;}
 .text__image{display: block; padding: 0px 0px 20px 0px;}
-.text p{padding: 0px 0px 20px 0px;}
-a.text__button-register, a.text__button-register:link, a.text__button-register:visited{margin: 0px 0px 20px 0px; display: block; width: 183px; height: 35px; background: url(text__button_register.png) no-repeat; text-decoration: none;}
+.text p{padding: 0px 0px 20px 0px; line-height: 1.4;}
+a.text__button-register, a.text__button-register:link, a.text__button-register:visited{margin: 40px 0px 20px 0px; display: block; width: 183px; height: 35px; background: url(text__button_register.png) no-repeat; text-decoration: none;}
 a.text__button-register:hover{background-position: 0px -35px;}
 a.text__button-register:active{background-position: 0px -70px;}
 .text__button-register span{display: none;}
