@@ -30,6 +30,11 @@ $(document).ready(function()
 		$('.popupresponse, #shadow, .popupthankyou').hide();
 		 }   // esc
 	});
-	
-	
+});
+
+$(document).ready(function()
+{
+	$("#slider ul").carouFredSel({
+   	pagination  : "#s-pagination"
+	});
 });
