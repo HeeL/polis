@@ -6,6 +6,7 @@ class AboutsController < ApplicationController
     
     @abouts = About.where(:category => 'About')
     @usefulls = About.where(:category => 'Usefull')
+    @vacancy = About.where(:category => 'Vacancy')
     @about = About.first
 
     respond_to do |format|
@@ -19,6 +20,7 @@ class AboutsController < ApplicationController
   def show
     @abouts = About.where(:category => 'About')
     @usefulls = About.where(:category => 'Usefull')
+    @vacancy = About.where(:category => 'Vacancy')
     @about = About.find(params[:id])
 
     respond_to do |format|

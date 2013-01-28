@@ -1,6 +1,6 @@
 class About < ActiveRecord::Base
   attr_accessible :description, :title, :category
-  CATEGORIES = [ "About", "Usefull" ]
+  CATEGORIES = [ "About", "Usefull", "Vacancy" ]
   validates :title, :description, presence: true
   validates :category, inclusion: CATEGORIES
   

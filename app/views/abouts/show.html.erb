@@ -18,6 +18,14 @@
 				<% end %>
 		        <% end %>
 			</ul>
+			<h3 class="left__menu-title">Вакансии</h3>
+			<ul>
+				<% @vacancy.each do |about| %>
+		      	<%= content_tag :li, :class => ('left__menu-selected' if @about == about) do %>
+				<%= link_to about.title, about %>
+				<% end %>
+		        <% end %>
+			</ul>
 		</div>
 	</div>
 	<!-- end left -->

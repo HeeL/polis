@@ -1,6 +1,7 @@
 ru:
   About: "О компании Полис"
   Usefull: "Полезная информация"
+  Vacancy: "Вакансии"
   choose: "Выбирите"
   Positive: "Поблагодарить"
   Negative: "Пожаловаться"
@@ -40,6 +41,7 @@ ru:
         priem1: "Прием строка 1"
         priem2: "Прием строка 2"
       about:
+        vacancy: "Вакансии"
         title: "Заголовок"
         description: "Текст"
         category: "Раздел"
