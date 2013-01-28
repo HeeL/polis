@@ -12,11 +12,8 @@ ActiveAdmin.register Article do
       end
      column :date
      column :office_id do |column|
-       
-       if column.office_id != nil
+       unless column.office_id.blank? || 'NULL'
          Office.where(:id => column.office_id).first.title
-       else
-         nil
        end
       
       end
@@ -48,10 +45,8 @@ ActiveAdmin.register Article do
            end
            row :date
            row :office_id do |article|
-              if article.office_id != nil
+              unless article.office_id.blank? || 'NULL'
                 Office.where(:id => article.office_id).first.title
-              else
-                nil
               end
            end
            row :description do |article|
