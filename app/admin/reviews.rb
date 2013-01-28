@@ -7,12 +7,12 @@ ActiveAdmin.register Review do
   
   index do 
     column :status do |column|
-      unless column.status.blank?
+      unless column.status.blank? || 'NULL'
 	t(column.status)
 			end
     end
     column :office_id do |column|
-      unless column.office_id.blank?
+      unless column.office_id.blank? || 'NULL'
 		Office.where(:id => column.office_id).first.title
 			end
     end
@@ -21,7 +21,7 @@ ActiveAdmin.register Review do
     end
     column :author
     column :doctors do |review|
-      unless review.doctors.blank?
+      unless review.doctors.blank? || 'NULL'
       review.doctors.split(",").map { |id| Doctor.where(:id => id).first.name }.join(', ')
   end
   end
@@ -46,7 +46,7 @@ ActiveAdmin.register Review do
              row :status
              
              row :office_id do |row|
-               unless row.office_id.blank?
+               unless row.office_id.blank? || 'NULL'
          		Office.where(:id => row.office_id).first.title
          			end
              end
@@ -58,7 +58,7 @@ ActiveAdmin.register Review do
              row :author
               
                row :doctors do |row|
-                 unless row.doctors.blank?
+                 unless row.doctors.blank? || 'NULL'
                  row.doctors.split(",").map { |id| Doctor.where(:id => id).first.name }.join(', ')
              end
              end
