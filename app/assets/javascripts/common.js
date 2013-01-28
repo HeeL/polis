@@ -110,7 +110,7 @@ function start_info_next()
 	else
 		start_info_hover(elem);
 					
-	setTimeout('start_info_next();', 8000);
+	setTimeout('start_info_next();', 12000);
 }
 
 function start_info_hover(elem)
