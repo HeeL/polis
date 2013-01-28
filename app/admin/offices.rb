@@ -17,7 +17,7 @@ ActiveAdmin.register Office do
           f.inputs "Details" do
           f.input :title
           f.input :adress
-          f.input :map, :label => "Google map 938x238"
+          f.input :map, :label => "Google map 948x238"
         end
         f.buttons
        end
