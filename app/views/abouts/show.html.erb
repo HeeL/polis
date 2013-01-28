@@ -2,30 +2,36 @@
 	<!-- left -->
 	<div class="body__left">
 		<div class="left__menu">
+			<% unless @abouts.blank? %>
 			<h3 class="left__menu-title">О Компании "Полис"</h3>
 			<ul>
 				<% @abouts.each do |about| %>
-		      		<%= content_tag :li, :class => ('left__menu-selected' if @about == about) do %>
+		      	<%= content_tag :li, :class => ('left__menu-selected' if @about == about) do %>
+				<%= link_to about.title, about %>
+				<% end %>
+		        <% end %>
+			</ul>
+			<% end %>
+			<% unless @usefulls.blank? %>
+			<h3 class="left__menu-title">Полезная информация</h3>
+				<ul>
+					<% @usefulls.each do |about| %>
+			      	<%= content_tag :li, :class => ('left__menu-selected' if @about == about) do %>
 					<%= link_to about.title, about %>
 					<% end %>
-		        <% end %>
-			</ul>
-			<h3 class="left__menu-title">Полезная информация</h3>
-			<ul>
-				<% @usefulls.each do |about| %>
-		      	<%= content_tag :li, :class => ('left__menu-selected' if @about == about) do %>
-				<%= link_to about.title, about %>
-				<% end %>
-		        <% end %>
-			</ul>
+			        <% end %>
+				</ul>
+			<% end %>
+			<% unless @vacancy.blank? %>
 			<h3 class="left__menu-title">Вакансии</h3>
-			<ul>
-				<% @vacancy.each do |about| %>
-		      	<%= content_tag :li, :class => ('left__menu-selected' if @about == about) do %>
-				<%= link_to about.title, about %>
-				<% end %>
-		        <% end %>
-			</ul>
+				<ul>
+					<% @vacancy.each do |about| %>
+			      	<%= content_tag :li, :class => ('left__menu-selected' if @about == about) do %>
+					<%= link_to about.title, about %>
+					<% end %>
+			        <% end %>
+				</ul>
+			<% end %>
 		</div>
 	</div>
 	<!-- end left -->
