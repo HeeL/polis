@@ -11,17 +11,15 @@
 	<div class="footer__section">
 			<ul class="footer__menu">
 				<li><%= link_to "Полис", abouts_path %></li>
-				<li><%= link_to "Адреса", offices_path %></li>
+				<li><%= link_to "Адреса поликлиник", offices_path %></li>
 				<li><%= link_to "Услуги", services_path %></li>
-				<li><%= link_to "Отзывы", reviews_path %></li>
 			</ul>
 		</div>
 		<div class="footer__section footer__section-last">
 			<ul class="footer__menu">
-				<li><a href="#">Блог</a></li>
+				<li><%= link_to "Отзывы", reviews_path %></li>
 				<li><%= link_to "Новости", articles_path %></li>
-				<li><a href="#">Контакты</a></li>
-				<li><a href="#">Помощь</a></li>
+				<li><%= link_to "Помощь", abouts_path %></li>
 				</ul>
 			</div>
 			<a href="http://zonazero.ru" class="footer__logo">Сделано<br/>в zero b2b</a>
