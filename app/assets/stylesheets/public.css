@@ -267,7 +267,7 @@ a.doctor__register:hover{color: #756bc7; text-decoration: underline;}
 .address__selector{background: url(address__selector.png) no-repeat; width: 539px; height: 43px; position: relative;}
 a.address__selector-label, a.address__selector-label:link, a.address__selector-label:visited{display: block; padding: 3px 0px 0px 19px; width: 520px; height: 40px; font: 13px/37px Tahoma; color: #555; text-decoration: none;}
 .address__selector-list{display: none; position: absolute; z-index: 100; left: 8px; top: 37px; width: 521px; border: 1px solid #e0e0e0; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; background: #fff;}
-.address__selector-list li{height: 26px; border-bottom: 1px solid #f5f5f5;}
+.address__selector-list li{height: 26px; border-bottom: 1px solid #f5f5f5; list-style-type: none;}
 .address__selector-list a, .address__selector-list a:link, .address__selector-list a:visited{display: block; padding: 0px 0px 0px 10px; font: 13px/26px Tahoma; color: #555; text-decoration: none;}
 .address__selector-list li:hover{background: #f2ffd9; border-bottom: 1px solid #fff;}
 .address__selector-list li.address__selector-selected{background: #f2ffd9 url(address__selector_selected.png) no-repeat 492px 6px; border-bottom: 1px solid #fff;}
