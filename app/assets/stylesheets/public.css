@@ -147,6 +147,8 @@ h1 {
 
 /* text block */
 .text{padding: 40px 0px 40px 0px; border-bottom: 1px dotted #555; color: #797c80; font: 14px/16px Tahoma;}
+.text ul {padding-left: 20px}
+.text ol {padding-left: 20px}
 .text__last{padding-bottom: 200px;}
 .text__noline{border: none;}
 .text__title{color: #756bc7; font: 52px/52px 'Conv_reformagroteskmedium', Tahoma; text-transform: uppercase; padding: 0px 0px 30px 0px;}
