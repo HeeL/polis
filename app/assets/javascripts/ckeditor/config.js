@@ -35,11 +35,7 @@ CKEDITOR.editorConfig = function( config )
 
     config.enterMode = CKEDITOR.ENTER_BR; // inserts <br />
 
-
-config.extraPlugins = 'stylesheetparser';
-
-config.contentsCss = ['/contents.css'];
-config.stylesSet = 'my_styles';
+	config.stylesSet = 'my_styles';
 };
 
 CKEDITOR.stylesSet.add( 'my_styles',
