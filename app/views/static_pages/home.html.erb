@@ -1,19 +1,25 @@
 <%= render 'slider' %>
 
 <div class="body clearfix">
-	<p class="start__text">Полис – это медицинские центры, прием в которых ведут врачи общей практики, участковые врачи. Обратиться за медицинской помощью к ним вы можете абсолютно бесплатно. Прямо сейчас.</p>
+	<p class="start__text">Полис - это ваш личный участковый врач, такой же, как в государственной поликлинике. Обратиться за медицинской помощью к нему вы можете абсолютно бесплатно. Прямо сейчас.</p>
 	<ul class="start__faq clearfix">
 		<li>
 			<span>что взять с собой на прием?</span>
-			<a href="#">Список самого необходимого<br />для визита к врач</a>
+			<%= link_to @priem do %>
+			Документы, которые вам понадобятся <br/>для визита к врачу
+			<% end %>
 		</li>
 		<li>
-			<span>как записаться на прием?</span>
-			<a href="http://gorzdrav.spb.ru">Мы подробно описали все три способа<br />записаться к врачу</a>
+			<span>Как записаться на прием?</span>
+			<%= link_to @zapis do %>
+			Есть 4 удобных способа сообщить <br/>нам о своем визите
+			<% end %>
 		</li>
 		<li class="start__faq-item-last">
-			<span>что взять с собой на прием?</span>
-			<a href="#">Список самого необходимого<br />для визита к врач</a>
+			<span>Нет полиса ОМС?</span>
+			<%= link_to @netpolis do %>
+			Получите его у нас
+			<% end %>
 		</li>
 	</ul>
 	
@@ -22,7 +28,7 @@
 		<ul class="clearfix">
 				<% @articles.each do |article| %>
 			    <li><%= link_to article.title, article %>
-				<p><%= truncate(strip_tags(article.description), length: 200) %></p></li>
+				<p><%= truncate(strip_tags(article.description), length: 200).html_safe %></p></li>
 				<% end %>
 		</ul>
 		<%= link_to "все новости", articles_path, :class => 'start__news-all' %>

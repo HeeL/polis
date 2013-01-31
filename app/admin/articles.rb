@@ -12,10 +12,11 @@ ActiveAdmin.register Article do
       end
      column :date
      column :office_id do |column|
-       unless column.office_id.blank? || 'NULL'
+       if column.office_id != nil
          Office.where(:id => column.office_id).first.title
+       else
+         nil
        end
-      
       end
       
     column :description do |column|

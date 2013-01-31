@@ -7,22 +7,29 @@ ActiveAdmin.register Review do
   
   index do 
     column :status do |column|
-      unless column.status.blank? || 'NULL'
-	t(column.status)
-			end
+      if column.status != nil
+	      t(column.status)
+			else
+         nil
+       end
     end
+    
     column :office_id do |column|
-      unless column.office_id.blank? || 'NULL'
-		Office.where(:id => column.office_id).first.title
-			end
+      if column.office_id != nil
+	      t(column.status)
+			else
+         nil
+       end
     end
     column :description do |column|
       truncate(strip_tags(column.description), length: 200)
     end
     column :author
     column :doctors do |review|
-      unless review.doctors.blank? || 'NULL'
+      if review.doctors != nil
       review.doctors.split(",").map { |id| Doctor.where(:id => id).first.name }.join(', ')
+      else
+         nil
   end
   end
     
@@ -45,11 +52,7 @@ ActiveAdmin.register Review do
            attributes_table do
              row :status
              
-             row :office_id do |row|
-               unless row.office_id.blank? || 'NULL'
-         		Office.where(:id => row.office_id).first.title
-         			end
-             end
+             row :office_id
              
              row :description do |row|
                truncate(strip_tags(row.description), length: 200)
@@ -58,8 +61,10 @@ ActiveAdmin.register Review do
              row :author
               
                row :doctors do |row|
-                 unless row.doctors.blank? || 'NULL'
+                 if row.doctors != nil
                  row.doctors.split(",").map { |id| Doctor.where(:id => id).first.name }.join(', ')
+                 else
+                    nil
              end
              end
              

@@ -9,7 +9,7 @@
 
 <ul id="main-menu">
 	<li><%= link_to abouts_path, :class => ('active' if controller_name == "abouts") do %>
-	  <span>Полис</span><i>Немного о компании<br />и полезные советы</i>
+	  <span>Полис</span><i>Информация о клиниках<br />Полезные советы</i>
 	<% end %></li>
 	<li><%= link_to offices_path, :class => ('active' if controller_name == "offices") do %>
 	  <span>Адреса</span><i>Отделения на карте<br />с расписанием приема</i>
@@ -18,9 +18,9 @@
 	  <span>Услуги</span><i>Участковые врачи<br />и вызов врача на дом</i>
 	<% end %></li>
 	<li><%= link_to reviews_path, :class => ('active' if controller_name == "reviews") do %>
-	  <span>Отзывы</span><i>Отзывы пациентов.<br />Оставьте и Вы свой!</i>
+	  <span>Отзывы</span><i>Мнение пациентов<br />Поделитесь своим</i>
 	<% end %></li>
 	<li><%= link_to articles_path, :class => ('active' if controller_name == "articles") do %>
-	  <span>Новости</span><i>Новости всего «полиса»<br />и клиник по-отдельности </i>
+	  <span>Новости</span><i>Главные события<br />Узнайте первым</i>
 	<% end %></li>
 </ul>

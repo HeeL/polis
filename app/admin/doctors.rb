@@ -14,10 +14,12 @@ ActiveAdmin.register Doctor do
      column :priem2
           
      column :office_id do |column|
-       unless column.office_id.blank? || 'NULL'
-        Office.where(:id => column.office_id).first.title
+       if column.office_id != nil
+          Office.where(:id => column.office_id).first.title
+        else
+          nil
+        end
       end
-    end
 
      default_actions
    end
@@ -43,11 +45,7 @@ ActiveAdmin.register Doctor do
            row :otpusk
            row :priem1
            row :priem2
-           row :office_id do |column|
-             unless column.office_id.blank? || 'NULL'
-             Office.where(:id => doctor.office_id).first.title
-           end
-         end
+           row :office_id 
          end
        end 
 end
