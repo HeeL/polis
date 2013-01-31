@@ -571,6 +571,7 @@ a.popupresponse__submit:hover{background-position: 0px -35px;}
 	font-size: 50px;
 	padding-bottom: 30px;
 	text-transform: uppercase;
+	line-height: 1;
 }
 
 #slider .s-text-wrap .sw-text {
