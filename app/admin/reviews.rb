@@ -7,7 +7,7 @@ ActiveAdmin.register Review do
   
   index do 
     column :status do |column|
-      if column.status != nil
+      if column.status != nil && 'NULL'
 	      t(column.status)
 			else
          nil
@@ -15,7 +15,7 @@ ActiveAdmin.register Review do
     end
     
     column :office_id do |column|
-      if column.office_id != nil
+      if column.office_id != nil && 'NULL'
 	      t(column.status)
 			else
          nil
@@ -26,7 +26,7 @@ ActiveAdmin.register Review do
     end
     column :author
     column :doctors do |review|
-      if review.doctors != nil
+      if review.doctors != nil && 'NULL'
       review.doctors.split(",").map { |id| Doctor.where(:id => id).first.name }.join(', ')
       else
          nil
@@ -61,7 +61,7 @@ ActiveAdmin.register Review do
              row :author
               
                row :doctors do |row|
-                 if row.doctors != nil
+                 if row.doctors != nil && 'NULL'
                  row.doctors.split(",").map { |id| Doctor.where(:id => id).first.name }.join(', ')
                  else
                     nil

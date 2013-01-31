@@ -12,7 +12,7 @@ ActiveAdmin.register Article do
       end
      column :date
      column :office_id do |column|
-       if column.office_id != nil
+       if column.office_id != nil && 'NULL'
          Office.where(:id => column.office_id).first.title
        else
          nil
@@ -47,7 +47,7 @@ ActiveAdmin.register Article do
            row :date
            row :office_id
            row :description do |article|
-             truncate(strip_tags(article.description), length: 500)
+             truncate(strip_tags(article.description), length: 500).html_safe
            end
        end  
      end

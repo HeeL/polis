@@ -14,7 +14,7 @@ ActiveAdmin.register Doctor do
      column :priem2
           
      column :office_id do |column|
-       if column.office_id != nil
+       if column.office_id != nil && 'NULL'
           Office.where(:id => column.office_id).first.title
         else
           nil
