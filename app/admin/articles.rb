@@ -44,11 +44,7 @@ ActiveAdmin.register Article do
              image_tag(article.photo.url(:content))
            end
            row :date
-           row :office_id do |article|
-              unless article.office_id.blank? || 'NULL'
-                Office.where(:id => article.office_id).first.title
-              end
-           end
+           row :office_id
            row :description do |article|
              truncate(strip_tags(article.description), length: 500)
            end
