@@ -5,7 +5,11 @@
 				<a name="top"></a>
 				<div class="clearfix"><a href="javascript:history.back()" class="newsdata__back">назад</a></div>
 				<h2 class="newsdata__title"><%= @article.title %></h2>
-				<span class="newsdata__subtitle"><%= @article.date %> | <%= Office.where(:id => @article.office_id).first.title %></span>
+				<span class="newsdata__subtitle"><%= @article.date %>
+				<% unless @article.office_id.blank? || 'NULL' %>
+				 | <%= Office.where(:id => @article.office_id).first.title %>
+				<% end %>
+				</span>
 				<div class="newsdata__image"><%= image_tag(@article.photo.url(:content)) %></div>
 				<p><%= sanitize @article.description %></p>
 				<a href="#top" class="newsdata__top">Вверх</a>
