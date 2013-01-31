@@ -5,12 +5,16 @@
 				<a name="top"></a>
 				<div class="clearfix"><a href="javascript:history.back()" class="newsdata__back">назад</a></div>
 				<h2 class="newsdata__title"><%= @article.title %></h2>
-				<span class="newsdata__subtitle"><%= @article.date %>				
-					<% if @article.office_id != nil %> | 
+				<span class="newsdata__subtitle">
+					<% if @article.date != nil %>
+					<%= @article.date.strftime("%m.%Y") %> 
+					<%	else nil end %>
+					<% if @article.date != nil && @article.office_id != nil %>
+					|
+					<%	else nil end %>
+					<% if @article.office_id != nil %> 
 					<%=	Office.where(:id => @article.office_id).first.title %>
-					<%	else 
-						nil
-						end %>
+					<%	else nil end %>
 				</span>
 				<div class="newsdata__image"><%= image_tag(@article.photo.url(:content)) %></div>
 				<p><%= sanitize @article.description %></p>
