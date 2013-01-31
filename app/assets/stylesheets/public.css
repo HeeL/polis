@@ -484,16 +484,20 @@ a.popupresponse__submit:hover{background-position: 0px -35px;}
 	display: block;
 	overflow: hidden;
 	padding: 15px 0 0 15px;
+	position: relative;
 	text-decoration: none;
 	height: 96px;
 	width: 178px;
 }
 
-#main-menu li:first-child a {
+#main-menu li:first-child a, #main-menu li:first-child a.no-active {
 	background-position: -5px 0;
 }
 	
-#main-menu li a:hover, #main-menu li a.active {background-position: 0 -111px;}
+#main-menu li a:hover, #main-menu li a.active:hover {background-position: 0 -222px; z-index: 2}
+#main-menu li a.active {background-position: 0 -111px; z-index: 1}
+
+#main-menu li a.no-active {background-position: 0 10px;}
 
 #main-menu li a span {
 	color: #6d66ba;

@@ -35,6 +35,19 @@ $(document).ready(function()
 $(document).ready(function()
 {
 	$("#slider ul").carouFredSel({
+		auto 			: {pauseDuration: 5000}, 
    	pagination  : "#s-pagination"
 	});
+});
+
+$(document).ready(function()
+{
+	$("#main-menu li a").hover(
+		function(){
+			$(this).parent().siblings("li").find("a").addClass("no-active");
+		},
+		function(){
+			$(this).parent().siblings("li").find("a").removeClass("no-active");
+		}
+	)
 });
