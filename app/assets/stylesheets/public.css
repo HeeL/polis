@@ -133,17 +133,7 @@ a.footer__logo, a.footer__logo:link, a.footer__logo:visited{position: absolute; 
 .left__menu li
 .left__menu .left__menu-selected a , .left__menu .left__menu-selected a:link, .left__menu .left__menu-selected a:visited{color: #1d2932; text-decoration: none;}
 
-h1 {
-	background: url(h1-bg.png) no-repeat center top;
-	color: #fff;
-	font: 52px/52px 'Conv_reformagroteskmedium', Tahoma;
-	height: 66px;
-	text-transform: uppercase;
-	margin-bottom: 40px;
-	text-align: center;
-	padding: 15px 0 0;
-	width: 100%;
-}
+
 
 /* text block */
 .text{padding: 40px 0px 40px 0px; border-bottom: 1px dotted #555; color: #797c80; font: 14px/16px Tahoma;}

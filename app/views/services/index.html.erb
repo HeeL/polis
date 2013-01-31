@@ -16,6 +16,7 @@
 		<!-- data -->		
 		<div class="body__data">
 			<div class="text text__noline">
+				<h1 class="text__title"><%= @service.title %></h1>
 				<%= sanitize @service.description %>
 				<% unless @service.appointment.blank? %>
 				<%= render 'button' %>	
