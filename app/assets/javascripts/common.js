@@ -87,19 +87,7 @@ function show_popupresponse(popuptype)
 
 }
 
-function on_resize()
-{		
-	var dy = $(window).height() - $('.header').height() - $('.body').height() - $('.footer').height() - 60 ;
-				
-	if (dy > 0)
-	{				
-		$('.footer').css('position', 'fixed');
-	}
-	else
-	{		
-		$('.footer').css('position', 'static');
-	}
-}
+
 
 function start_info_next()
 {

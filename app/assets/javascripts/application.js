@@ -19,8 +19,6 @@
 
 $(document).ready(function()
 {
-	$(window).bind('resize', on_resize);
-	on_resize();
 	
 	start_info_init();
 	
@@ -50,5 +48,20 @@ $(document).ready(function()
 			$(this).parent().siblings("li").find("a").removeClass("no-active");
 		}
 	)
+	
+	// плавающее левое меню
+ 	var lMenu = $('#scroll-menu'),
+	lMenuPos = lMenu.offset();
+	
+	var $lMenu = $('#scroll-menu');
+	
+	$(window).scroll(function(){
+		if($(this).scrollTop() > lMenuPos.top){
+			$lMenu.css({"top": $(this).scrollTop() - lMenuPos.top});
+		} else if($(this).scrollTop() <= lMenuPos.top){
+			$lMenu.css({"top": "0"});
+		}		
+	});
+	
 	
 });

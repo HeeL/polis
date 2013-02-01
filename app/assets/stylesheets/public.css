@@ -85,8 +85,18 @@ a:hover{text-decoration: none; }
 
 }
 
+html, body {
+	min-height: 100%!important;
+	height: 100%;
+}
+
+#container {
+	min-height: 100%;
+	_height: 100%;
+}
+
 /* application */
-.body{width: 950px; margin: 0px auto; font: 12px/14px Tahoma; color: #505c66;}
+.body{width: 950px; margin: 0px auto; font: 12px/14px Tahoma; color: #505c66; padding-bottom: 170px;}
 .body__data{float: right; width: 700px; position: relative;}
 .body__data-left{float: left; width: 620px; position: relative;}
 .body__right{float: right; width: 220px; padding: 84px 0px 0px 0px;}
@@ -104,7 +114,7 @@ a:hover{text-decoration: none; }
 .header__phone b{display: block; font: 24px/24px 'Conv_PFDinDisplayPro-Med', Tahoma; text-shadow: 0px 1px 2px #5b53a6; padding: 0px 0px 4px 0px;}
 
 /* footer */
-.footer{margin: 0px 0px 0px 0px; background: #fafafa; padding: 35px 0px 35px 0px; bottom: 0px; left: 0px; right: 0px;}
+.footer{margin: 0px 0px 0px 0px; background: #fafafa; padding: 35px 0px 0px 0px; bottom: 0px; left: 0px; right: 0px; height: 125px; position: relative; margin-top: -160px;}
 .footer-inner{width: 950px; margin: 0px auto; position: relative;}
 
 .footer__section{float: left; width: 324px;}
@@ -122,8 +132,13 @@ a:hover{text-decoration: none; }
 a.footer__logo, a.footer__logo:link, a.footer__logo:visited{position: absolute; right: 0px; top: 0px; width: 89px; padding: 40px 0px 0px 0px; background: url(footer__logo.png) no-repeat; font: 12px/14px Tahoma; color: #505c66; text-align: center; text-decoration: none;}
 
 /* left */
-.body__left{float: left; width: 220px; padding: 0;}
+.body__left{float: left; width: 220px; padding: 0; position: relative;}
 
+#scroll-menu {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
 
 .left__menu-title{color: #919599; font: 16px/24px 'Conv_PFDinTextCondPro-Regular', Tahoma; padding: 31px 0px 9px 0px;}
 .left__menu li{padding: 0px 0px 9px 15px; position: relative; left: -15px; list-style-type: none;}
