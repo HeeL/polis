@@ -7,7 +7,7 @@ class AboutsController < ApplicationController
     @abouts = About.where(:category => 'About')
     @usefulls = About.where(:category => 'Usefull')
     @vacancy = About.where(:category => 'Vacancy')
-    @about = About.first
+    @abouts = About.all
 
     respond_to do |format|
       format.html # index.html.erb

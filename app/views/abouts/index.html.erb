@@ -7,7 +7,7 @@
 			<ul>
 				<% @abouts.each do |about| %>
 		      	<%= content_tag :li, :class => ('left__menu-selected' if @about == about) do %>
-				<%= link_to about.title, about %>
+				<%= link_to about.title, '#id'+about.id.to_s %>
 				<% end %>
 		        <% end %>
 			</ul>
@@ -17,7 +17,7 @@
 				<ul>
 					<% @usefulls.each do |about| %>
 			      	<%= content_tag :li, :class => ('left__menu-selected' if @about == about) do %>
-					<%= link_to about.title, about %>
+					<%= link_to about.title, '#id'+about.id.to_s %>
 					<% end %>
 			        <% end %>
 				</ul>
@@ -27,7 +27,7 @@
 				<ul>
 					<% @vacancy.each do |about| %>
 			      	<%= content_tag :li, :class => ('left__menu-selected' if @about == about) do %>
-					<%= link_to about.title, about %>
+					<%= link_to about.title, '#id'+about.id.to_s %>
 					<% end %>
 			        <% end %>
 				</ul>
@@ -37,11 +37,12 @@
 	<!-- end left -->
 	<!-- data -->		
 	<div class="body__data">
-		<div class="text text__noline">
-			<h1 class="text__title"><%= @about.title %></h1>
-			
-			<%= sanitize @about.description %>
-			
+		<% @abouts.each do |about| %>
+		<div id="<%= 'id'+about.id.to_s %>" class="text">
+			<h1 class="text__title"><%= about.title %></h1>
+			<%= sanitize about.description %>
+		</div>
+		<% end %>		
 		</div>
 		
 	</div>
