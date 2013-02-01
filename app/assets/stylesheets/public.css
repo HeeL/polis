@@ -138,6 +138,7 @@ a.footer__logo, a.footer__logo:link, a.footer__logo:visited{position: absolute; 
 	position: absolute;
 	left: 0;
 	top: 0;
+	width: 100%;
 }
 
 .left__menu-title{color: #919599; font: 16px/24px 'Conv_PFDinTextCondPro-Regular', Tahoma; padding: 31px 0px 9px 0px;}
