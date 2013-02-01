@@ -3,8 +3,8 @@ class StaticPagesController < ApplicationController
     @review = Review.new
     @office_select = Office.all
     @articles = Article.limit(3)
-    @priem = About.find(11)
-    @zapis = About.find(11)
+    @priem = About.find(15)
+    @zapis = About.find(16)
     @netpolis = About.find(11)
   end
 end
