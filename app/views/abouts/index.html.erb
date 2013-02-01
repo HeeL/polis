@@ -37,7 +37,19 @@
 	<!-- end left -->
 	<!-- data -->		
 	<div class="body__data">
-		<% @content.each do |about| %>
+		<% @abouts.each do |about| %>
+		<div id="<%= 'id'+about.id.to_s %>" class="text">
+			<h1 class="text__title"><%= about.title %></h1>
+			<%= sanitize about.description %>
+		</div>
+		<% end %>
+		<% @usefulls.each do |about| %>
+		<div id="<%= 'id'+about.id.to_s %>" class="text">
+			<h1 class="text__title"><%= about.title %></h1>
+			<%= sanitize about.description %>
+		</div>
+		<% end %>
+		<% @vacancy.each do |about| %>
 		<div id="<%= 'id'+about.id.to_s %>" class="text">
 			<h1 class="text__title"><%= about.title %></h1>
 			<%= sanitize about.description %>

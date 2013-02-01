@@ -8,7 +8,7 @@ ActiveAdmin.register Service do
     index do 
      column :title
      column :description do |service|
-       truncate(strip_tags(service.description), length: 800)  
+       truncate(strip_tags(service.description), length: 800).html_safe
      end
      column :appointment
 
