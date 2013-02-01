@@ -13,7 +13,7 @@
 			<div class="s-text-wrap">
 				<span class="sw-title">Почему бесплатно?</span>
 				<div class="sw-text">Вы лечитесь в частной клинике,<br />а платит за это государство.<br />Полис работает в рамках государственной территориальной программы обязательного медицинского страхования.</div>
-				<a href="#" class="sw-detail">Узнайте подробности</a>
+				<%= link_to "Узнайте подробности", @whyfree, :class=>'sw-detail' %>
 			</div>
 		</li>
 		
@@ -23,7 +23,7 @@
 				<span class="sw-title">Врачи общей практики —<br /> кто они?</span>
 				<div class="sw-text" style="margin-top: -20px;">Новое качество амбулаторной медицинской помощи.
 				<br />Лечим не болезнь, а человека.</div>
-				<a href="#" class="sw-detail">Узнайте подробнее</a>
+				<%= link_to "Узнайте подробнее", @whois, :class=>'sw-detail' %>
 			</div>
 		</li>
 	</ul>

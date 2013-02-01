@@ -6,5 +6,7 @@ class StaticPagesController < ApplicationController
     @priem = About.find(15)
     @zapis = About.find(16)
     @netpolis = Service.find(9)
+    @whyfree = About.find(18)
+    @whois = About.find(14)
   end
 end
