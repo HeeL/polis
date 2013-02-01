@@ -3,7 +3,6 @@ class ServicesController < ApplicationController
   # GET /services.json
   def index
     @services = Service.all
-    @service = Service.first
 
     respond_to do |format|
       format.html # index.html.erb
