@@ -6,7 +6,7 @@
 				<ul>
 					<% @services.each do |service| %>
 			      	<%= content_tag :li, :class => ('left__menu-selected' if @service == service) do %>
-					<%= link_to service.title, service %>
+					<%= link_to service.title, '#id'+service.id.to_s %>
 					<% end %>
 			        <% end %>
 				</ul>					
@@ -15,13 +15,15 @@
 		<!-- end left -->
 		<!-- data -->		
 		<div class="body__data">
-			<div class="text text__noline">
-				<h1 class="text__title"><%= @service.title %></h1>
-				<%= sanitize @service.description %>
-				<% unless @service.appointment.blank? %>
+			<% @services.each do |service| %>
+			<div id="<%= 'id'+service.id.to_s %>" class="text">
+				<h1 class="text__title"><%= service.title %></h1>
+				<%= sanitize service.description %>
+				<% unless service.appointment.blank? %>
 				<%= render 'button' %>	
 				<% end %>
 			</div>
+			<% end %>
 
 			
 		</div>

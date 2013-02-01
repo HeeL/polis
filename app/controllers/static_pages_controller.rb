@@ -5,6 +5,6 @@ class StaticPagesController < ApplicationController
     @articles = Article.limit(3)
     @priem = About.find(15)
     @zapis = About.find(16)
-    @netpolis = About.find(11)
+    @netpolis = About.find(9)
   end
 end

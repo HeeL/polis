@@ -50,4 +50,5 @@ $(document).ready(function()
 			$(this).parent().siblings("li").find("a").removeClass("no-active");
 		}
 	)
+	
 });
