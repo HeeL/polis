@@ -124,7 +124,7 @@ a.footer__logo, a.footer__logo:link, a.footer__logo:visited{position: absolute; 
 /* left */
 .body__left{float: left; width: 220px; padding: 0;}
 
-.fixed {position: fixed; top: 270px;}
+
 .left__menu-title{color: #919599; font: 16px/24px 'Conv_PFDinTextCondPro-Regular', Tahoma; padding: 31px 0px 9px 0px;}
 .left__menu li{padding: 0px 0px 9px 15px; position: relative; left: -15px; list-style-type: none;}
 .left__menu li.left__menu-selected{background: url(left__menu_selected.png) no-repeat 0px 5px; }
