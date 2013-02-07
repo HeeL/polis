@@ -248,7 +248,7 @@ a.newsdata__top, a.newsdata__top:link, a.newsdata__top:visited{padding: 10px 0px
 .address__top{height: 70px; position: relative;}
 .address__info{width: 300px; height: 30px; top: 0px; right: 0px; position: absolute; color: #555; font: 14px/16px Tahoma; padding: 0px 20px 0px 40px; background: url(address__top_info.png) no-repeat 0px 4px;}
 
-.address__map{height: 238px; position: relative; border: 1px solid #7a97f1;}
+.address__map{height: 402px; position: relative; border: 1px solid #7a97f1;}
 a.address__map-expand, a.address__map-expand:link, a.address__map-expand:visited{font: 12px/12px Tahoma; color: #999; position: absolute; display: block; right: 0px; bottom: -20px; z-index: 50;}
 
 .address__bottom{padding: 11px 0px 0px 400px; position: relative; font: 14px/27px Tahoma; color: #555; height: 110px;}
