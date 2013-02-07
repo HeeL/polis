@@ -20,6 +20,22 @@
 $(document).ready(function()
 {
 	
+	$(window).scroll(function(){
+		if($(this).scrollTop() > 800){
+			$(".up-link").show();
+		} else {
+			$(".up-link").hide();
+		}		
+	}); 
+	
+	// Наверх (скролл)
+	$(".up-link").click(function(){
+		$("html, body").animate({scrollTop:0}, "slow");
+		
+		return false;
+	});
+	
+	
 	start_info_init();
 	
 	$(document).keyup(function(e) {
@@ -62,6 +78,12 @@ $(document).ready(function()
 			$lMenu.css({"top": "0"});
 		}		
 	});
+	
+	// Появление скролла "Наверх"
+	
+	
+	
+
 	
 	
 });

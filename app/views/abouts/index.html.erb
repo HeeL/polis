@@ -37,6 +37,9 @@
 	<!-- end left -->
 	<!-- data -->		
 	<div class="body__data">
+		
+		
+		
 		<% @abouts.each do |about| %>
 		<div id="<%= 'id'+about.id.to_s %>" class="text">
 			<h1 class="text__title"><%= about.title %></h1>
@@ -54,8 +57,12 @@
 			<h1 class="text__title"><%= about.title %></h1>
 			<%= sanitize about.description %>
 		</div>
-		<% end %>		
+		<% end %>	
+		
+		<a href="#" title="Наверх" class="up-link">Вверх</a>
+			
 		</div>
+		
 		
 	</div>
 	<!-- end data -->

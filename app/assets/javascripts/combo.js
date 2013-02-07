@@ -19,8 +19,6 @@ $(document).ready(function()
 		$('.address__selector-list li').removeClass('address__selector-selected');
 		$(this).parent().addClass('address__selector-selected');
 		$('.address__selector-label').html($(this).html());
-		$('.address__selector').removeClass('address-open');
-		
-		
+		$('.address__selector').removeClass('address-open');	
 	});
 });
