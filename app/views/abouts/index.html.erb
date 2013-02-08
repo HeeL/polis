@@ -43,19 +43,19 @@
 		<% @abouts.each do |about| %>
 		<div id="<%= 'id'+about.id.to_s %>" class="text">
 			<h1 class="text__title"><%= about.title %></h1>
-			<%= sanitize about.description %>
+			<%= about.description.html_safe %>
 		</div>
 		<% end %>
 		<% @usefulls.each do |about| %>
 		<div id="<%= 'id'+about.id.to_s %>" class="text">
 			<h1 class="text__title"><%= about.title %></h1>
-			<%= sanitize about.description %>
+			<%= sanitize about.description.html_safe %>
 		</div>
 		<% end %>
 		<% @vacancy.each do |about| %>
 		<div id="<%= 'id'+about.id.to_s %>" class="text">
 			<h1 class="text__title"><%= about.title %></h1>
-			<%= sanitize about.description %>
+			<%= sanitize about.description.html_safe %>
 		</div>
 		<% end %>	
 		

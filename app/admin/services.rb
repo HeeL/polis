@@ -28,7 +28,7 @@ ActiveAdmin.register Service do
          attributes_table do
            row :title
            row :description do |row|
-             sanitize row.description
+             row.description.html_safe
            end
            row :appointment
          end
