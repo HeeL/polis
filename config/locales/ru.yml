@@ -9,6 +9,8 @@ ru:
   superadmin: "Супер администратор"
   admin: "Администратор"
   manager: "Кол центр"
+  no_image: "Изображение отсутствует"
+  destroy_image: "Удалить изображение?"
   will_paginate:
     previous_label: "&lt;"
     next_label: "&gt;"

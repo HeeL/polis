@@ -7,8 +7,15 @@ ActiveAdmin.register Article do
  
     index do 
      column :title
-     column :photo do |column|
-       image_tag(column.photo.url(:content))
+     
+     
+     
+     column :photo do |article|
+        if article.photo?
+          image_tag(article.photo.url(:content))
+        else
+          I18n.t('no_image')
+        end
       end
      column :date
      column :office_id do |column|
@@ -27,10 +34,16 @@ ActiveAdmin.register Article do
      default_actions
    end
 
-   form :html => { :enctype => "multipart/form-data" } do |f|
+   form :html => { :multipart => true } do |f|
      f.inputs do
      f.input :title
-     f.input :photo, :as => :file
+     f.input :photo, :as => :file, :hint => ( f.object.new_record? || !f.object.photo? ) ? nil : image_tag(f.object.photo.url(:content))
+       unless f.object.new_record? || !f.object.photo?
+     f.input :delete_photo, :as => :boolean, :label => I18n.t('destroy_image')
+      end
+       
+       
+       
      f.input :date
      f.input :office_id, :as => :select, :collection => Office.all
      f.input :description, :as => :ckeditor, :label => false, :input_html => { :toolbar => 'Full' }
@@ -42,7 +55,11 @@ ActiveAdmin.register Article do
          attributes_table do
            row :title
            row :photo do |article|
-             image_tag(article.photo.url(:content))
+             if article.photo?
+               image_tag(article.photo.url(:content))
+             else
+               nil
+             end
            end
            row :date
            row :office_id
