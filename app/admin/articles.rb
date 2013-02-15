@@ -39,7 +39,7 @@ ActiveAdmin.register Article do
      f.input :title
      f.input :photo, :as => :file, :hint => ( f.object.new_record? || !f.object.photo? ) ? nil : image_tag(f.object.photo.url(:content))
        unless f.object.new_record? || !f.object.photo?
-     f.input :delete_photo, :as => :boolean, :label => I18n.t('destroy_image')
+     f.input :delete_photo, :as => :boolean, :label => I18n.t('destroy_image'), :wrapper_html => { :class => "important" }
       end
        
        

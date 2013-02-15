@@ -66,21 +66,46 @@ $(document).ready(function()
 	)
 	
 	// плавающее левое меню
- 	var lMenu = $('#scroll-menu'),
-	lMenuPos = lMenu.offset();
-	
-	var $lMenu = $('#scroll-menu');
-	
-	$(window).scroll(function(){
-		if($(this).scrollTop() > lMenuPos.top){
-			$lMenu.css({"top": $(this).scrollTop() - lMenuPos.top});
-		} else if($(this).scrollTop() <= lMenuPos.top){
-			$lMenu.css({"top": "0"});
-		}		
-	});
-	
-	// Появление скролла "Наверх"
-	
+ 	 	var lMenuPos = $('#scroll-menu').offset();
+
+		if(lMenuPos != undefined)
+		{
+			var lMenu = $('#scroll-menu');
+			var lMenuHeight = lMenu.innerHeight();
+			var footerPos = $('.footer').offset();
+
+			if($(this).scrollTop() > lMenuPos.top){
+				if (((lMenuHeight + lMenuPos.top) < (footerPos.top - 40)))
+				{
+					$(lMenu).css({"top": $(this).scrollTop() - lMenuPos.top});
+				}
+				else if ($(this).scrollTop() < lMenuPos.top)
+				{
+					$(lMenu).css({"top": $(this).scrollTop() - lMenuPos.top});
+				}
+			} else if($(this).scrollTop() <= lMenuPos.top){
+				$(lMenu).css({"top": "0"});
+			}
+
+			$(window).scroll(function(){
+				var lMenuPosNow = $(lMenu).offset();
+
+				if($(this).scrollTop() > lMenuPos.top){
+					if (((lMenuHeight + lMenuPosNow.top) < (footerPos.top - 40)))
+					{
+						$(lMenu).css({"top": $(this).scrollTop() - lMenuPos.top});
+						lMenuPosTopTemp = lMenuPosNow.top;
+					}
+					else if ($(this).scrollTop() < lMenuPosTopTemp)
+					{
+						$(lMenu).css({"top": $(this).scrollTop() - lMenuPos.top});
+					}
+				} else if($(this).scrollTop() <= lMenuPos.top){
+					$(lMenu).css({"top": "0"});
+				}	
+			});
+		}
+
 	
 	
 
