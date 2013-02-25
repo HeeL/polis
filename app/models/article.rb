@@ -5,7 +5,7 @@ class Article < ActiveRecord::Base
   
   before_validation :clear_photo
   
-  has_attached_file :photo, :styles => { :content => "134x134!" }
+  has_attached_file :photo, :styles => { :content => "134x134#" }
   
   def delete_photo=(value)
      @delete_photo = !value.to_i.zero?
