@@ -9,7 +9,7 @@ class Ability
        when "admin"
          can :manage, Article
          can :manage, Doctor
-         can :manage, Office
+         can :manage, Review
        when "manager"
          can :manage, Office    
        end
