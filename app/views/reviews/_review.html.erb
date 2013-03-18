@@ -19,13 +19,15 @@
 
 			<a href="" class="popupresponse__line-add" id="add_doctors">Еще один врач</a>
 		</div>			
-		<%= hidden_field_tag 'review[doctors]', nil, id: 'review_docs' %>		
+		<%= hidden_field_tag 'review[doctors]', nil, id: 'review_docs' %>
 	</div>
 	<div class="popupresponse__info clearfix">
+		<div id='feedback_error' class="feedback-error"></div>
 		<label>Представьтесь:</label>
 		<input class="popupresponse__name" id="review_author" name="review[author]" size="30" type="text" value="Введите Ваше имя..." onclick="this.value=''" />
 		<input class="popupresponse__email" id="review_contact" name="review[contact]" size="30" type="text" value="e-mail или номер телефона" onclick="this.value=''" />
 	</div>
+	<div id='feedback_error_description' class="feedback-error"></div>
 	<textarea cols="40" id="review_description" name="review[description]" rows="20" onclick="this.value=''">Ваш отзыв</textarea>
 	<%= f.submit "Отправить отзыв", :class => "popupresponse__submit" %>
 
