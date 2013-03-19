@@ -388,7 +388,7 @@ a.start__news-all {
 }
 
 .error-border {
-  border: 1px solid #ff0000;
+  border: 1px solid #ff0000 !important;
 }
 
 /* popupresponse */
