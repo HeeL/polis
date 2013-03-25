@@ -1,0 +1,17 @@
+<div class="doctors">
+	<ul>
+	<% @doctors.each do |doctor| %>
+		<li class="doctor">
+			<b class="doctor__name"><%= doctor.name %></b>
+			<span class="doctor__info"><%= doctor.job %></span>
+			<% if doctor.status.blank? %>
+			<p class="doctor__hours"><em>Прием:</em><%= doctor.priem1 %><br/><%= doctor.priem2 %></p>
+			<% else %> 
+			<p class="doctor__hours"><em>Прием:</em><i><%= doctor.otpusk %></i></p>
+			<% end %>
+			<a href="#" class="doctor__register">Записаться на прием</a>
+		</li>
+	<% end %>
+	</ul>
+</div>
+
