@@ -23,7 +23,7 @@
 			<a href="http://gorzdrav.spb.ru/" class="address__bottom-register"><span>Записаться на прием к врачу<span></a>
 		</div>
 		<div class="clearfix">
-			<%= render 'doctors' %>
+			<%= render :partial => 'doctors' %>
 			<%= if @articles.empty?
 			nil
 			else

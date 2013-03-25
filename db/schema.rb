@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130108184504) do
+ActiveRecord::Schema.define(:version => 20130325151050) do
 
   create_table "abouts", :force => true do |t|
     t.string   "title"
@@ -94,6 +94,11 @@ ActiveRecord::Schema.define(:version => 20130108184504) do
     t.string   "otpusk"
     t.string   "priem1"
     t.string   "priem2"
+    t.text     "text"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
   end
 
   create_table "offices", :force => true do |t|

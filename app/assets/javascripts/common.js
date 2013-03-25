@@ -122,10 +122,7 @@ function show_popupresponse(popuptype)
     $(".popupresponse__line input").click(popup_check_doctor);
 
   
-
-  
-
-}
+};
 
 
 

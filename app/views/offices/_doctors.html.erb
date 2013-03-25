@@ -2,14 +2,20 @@
 	<ul>
 	<% @doctors.each do |doctor| %>
 		<li class="doctor">
-			<b class="doctor__name"><%= doctor.name %></b>
-			<span class="doctor__info"><%= doctor.job %></span>
-			<% if doctor.status.blank? %>
-			<p class="doctor__hours"><em>Прием:</em><%= doctor.priem1 %><br/><%= doctor.priem2 %></p>
-			<% else %> 
-			<p class="doctor__hours"><em>Прием:</em><i><%= doctor.otpusk %></i></p>
-			<% end %>
-			<a href="#" class="doctor__register">Записаться на прием</a>
+			<div class="doctor_inner">
+				<div class="doctor_inner-image"><%= if doctor.photo? then image_tag(doctor.photo.url(:content)) end %></div>
+				<b class="doctor__name"><%= doctor.name %></b>
+				<span class="doctor__info"><%= doctor.job %></span>
+				<% if doctor.status.blank? %>
+				<p class="doctor__hours"><em>Прием:</em><%= doctor.priem1 %><br/><%= doctor.priem2 %></p>
+				<% else %> 
+				<p class="doctor__hours"><em>Прием:</em><i><%= doctor.otpusk %></i></p>
+				<% end %>
+				<p class="doctor__dosie"><em>Досье</em>&nbsp(<a href="#" class="nl-detail-link">показать</a>)</p>
+				<% if doctor.text? %>
+				<div class="nl-other-text"><%= doctor.text %></div>
+				<% end %>
+			</div>
 		</li>
 	<% end %>
 	</ul>

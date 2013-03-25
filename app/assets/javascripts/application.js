@@ -56,6 +56,22 @@ $(document).ready(function()
 
 $(document).ready(function()
 {
+	// Врачи инфо
+	$(".nl-detail-link").click(function(){
+		var linkElement = $(this);
+		var linkText = $(this).text();
+		
+		$(".nl-other-text").toggleClass("nl-active").siblings("div").removeClass("nl-active");
+		
+		if (linkText == "показать")
+			$(linkElement).text("скрыть");
+		else
+			$(linkElement).text("показать");
+	
+		return false;
+	});
+	
+	
 	$("#main-menu li a").hover(
 		function(){
 			$(this).parent().siblings("li").find("a").addClass("no-active");

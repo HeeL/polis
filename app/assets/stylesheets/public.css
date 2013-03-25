@@ -276,14 +276,23 @@ a.address__bottom-register:active{background-position: 0px -110px}
 /* doctors */
 .doctors{width: 650px; float: left; position: relative; left: -15px;}
 .doctor{border-bottom: 1px dotted #afd141; padding: 0px 0px 25px 15px; margin: 0px 0px 20px 0px; list-style-type: none;}
+.doctor_inner{position: relative; padding: 0px 0px 0px 160px;}
+.doctor_inner-image{position: absolute; left: 0px; top: 0px; width: 135px; height: 143px; padding: 1px 0px 0px 1px; background: url(news__item_image.png) no-repeat;}
 .doctor__last{border: none;}
-.doctor__name{display: block; color: #6d8ded; font-size: 24px; font-weight: normal; line-height: 140%;}
-.doctor__info{display: block; font: 14px/16px Tahoma; color: #aaaeb2; padding: 0px 0px 15px 0px;}
-.doctor__hours{font: 16px/18px Tahoma; color: #797c80; display: block; position: relative; padding: 0px 0px 30px 70px;}
+.doctor__name{display: block; color: #6d8ded; font-size: 22px; font-weight: normal;}
+.doctor__info{display: block; font: 14px/16px Tahoma; color: #aaaeb2; padding: 10px 0px 20px 0px;}
+.doctor__hours{font: 16px/18px Tahoma; color: #797c80; display: block; position: relative; padding: 0px 0px 20px 70px; min-height: 40px;}
 .doctor__hours em{position: absolute; left: 0px; top: 0px; font: bold 16px/18px Tahoma; color: #797c80;}
 .doctor__hours i{color: #c96e03; font: bold 16px/18px Tahoma; }
-a.doctor__register, a.doctor__register:link, a.doctor__register:visited{font: 14px/18px Tahoma; color: #555;}
-a.doctor__register:hover{color: #756bc7; text-decoration: underline;}
+.doctor__dosie {font: 16px/18px Tahoma; color: #797c80; display: block; position: relative; padding: 0px 0px 10px 50px;}
+.doctor__dosie em{position: absolute; left: 0px; top: 0px; font: bold 16px/18px Tahoma; color: #797c80;}
+.doctor__dosie a{text-decoration: none; border-bottom: 1px dotted #6d8ded;}
+.doctor__dosie a:hover{border-bottom: none;}
+.nl-other-text {margin-bottom: 20px; display: none;}
+.nl-active {display: inline;}
+
+a.doctor__register, a.doctor__register:link, a.doctor__register:visited{font: 14px/18px Tahoma; color: #555; font-weight: bold;}
+a.doctor__register:hover{text-decoration: underline;}
 
 /* address selector */
 .address__selector{background: url(address__selector.png) no-repeat; width: 539px; height: 43px; position: relative;}
