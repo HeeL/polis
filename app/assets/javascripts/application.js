@@ -61,7 +61,8 @@ $(document).ready(function()
 		var linkElement = $(this);
 		var linkText = $(this).text();
 		
-		$(".nl-other-text").toggleClass("nl-active").siblings("div").removeClass("nl-active");
+		
+		$(this).parent().parent().toggleClass("nl-active");
 		
 		if (linkText == "показать")
 			$(linkElement).text("скрыть");
