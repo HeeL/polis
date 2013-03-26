@@ -61,7 +61,6 @@ $(document).ready(function()
 		var linkElement = $(this);
 		var linkText = $(this).text();
 		
-		
 		$(this).parent().parent().toggleClass("nl-active");
 		
 		if (linkText == "показать")
