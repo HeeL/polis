@@ -3,9 +3,10 @@ ActiveAdmin.register Article do
   controller.authorize_resource
   config.batch_actions = false
   filter :office_id, collection: proc { Office.all }, as: :select
-  config.sort_order = 'title_asc'
+  config.sort_order = 'created_at_desc'
  
     index do 
+     column :created_at
      column :title
      
      
