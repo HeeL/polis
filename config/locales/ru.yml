@@ -61,6 +61,7 @@ ru:
         description: "Текст"
         office_id: "Отделение"
         office: "Пункт"
+        created_at: "Создана"
       office:
         title: "Название"
         adress: "Адрес"
