@@ -54,4 +54,4 @@ function init () {
 			.add(office10)
 			.add(office11)
 			.add(office12);
-}
+};
