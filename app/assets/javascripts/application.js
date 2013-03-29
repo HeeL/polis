@@ -15,7 +15,7 @@
 //= require jquery_ujs
 //= require ckeditor/init
 //= require_tree .
-
+//= require reviews
 
 $(document).ready(function()
 {
