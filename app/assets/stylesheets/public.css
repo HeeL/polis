@@ -225,17 +225,6 @@ a.newsdata__top, a.newsdata__top:link, a.newsdata__top:visited{padding: 10px 0px
 
 a.up-link{z-index: 10; padding: 10px 0px 0px 34px; width: 64px; height: 42px; display: none; position: fixed; bottom: 250px; right: 20px; background: url(newsdata__top.png) no-repeat; color: #6d8ded; font: 18px/18px Tahoma; text-decoration: none}
 
-.jshafkjak {
-
-
-	
-	
-
-	
-
-}
-
-
 /* response menu */
 .response__menu{padding: 0px 0px 0px 0px;}
 .response__menu a, .response__menu a:link, .response__menu a:visited{display: block; margin: 0px 0px 12px 0px; padding: 0px 0px 0px 12px; width: 150px; height: 38px; font: 14px/38px Tahoma; color: #fff; text-decoration: none; }
@@ -650,4 +639,9 @@ a.popupresponse__submit:hover{background-position: 0px -35px;}
 
 #slider .s-text-wrap .sw-detail:hover {
 	text-decoration: none;
+}
+
+#scroll-menu ul {
+	background: #fff;
+	position: relative;
 }

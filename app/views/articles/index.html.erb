@@ -1,5 +1,4 @@
 <div class="body clearfix">
-	<!-- left -->
 	<div class="body__left">
 		<div class="left__news" id="scroll-menu">
 			<%= form_tag('/load_articles', remote: true, id: 'sort_form', data: {type: 'html'}) do%>
@@ -22,6 +21,7 @@
 	<!-- end left -->
 	<!-- data -->		
 	<div class="body__data">
+		
 		<ul class="news" id="news_block">
 		<%= render 'news' %>
 		</ul>

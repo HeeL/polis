@@ -16,7 +16,6 @@
 					<%=	Office.where(:id => @article.office_id).first.title %>
 					<%	else nil end %>
 				</span>
-				<div class="newsdata__image"><%= image_tag(@article.photo.url(:content)) %></div>
 				<p><%= sanitize @article.description %></p>
 
 				<a href="#" title="Наверх" class="up-link">Вверх</a>
