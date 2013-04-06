@@ -11,11 +11,11 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
-//= require_self
 //= require jquery_ujs
 //= require ckeditor/init
 //= require_tree .
-//= require reviews
+//= require_self
+
 
 $(document).ready(function()
 {
