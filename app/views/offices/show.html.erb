@@ -1,3 +1,33 @@
+<% content_for :head do %>
+<script src="http://api-maps.yandex.ru/2.0/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
+<script type="text/javascript">
+ymaps.ready(init);
+function init () {
+	var myGeocoder = ymaps.geocode("<%= @office.adress %>");
+			myGeocoder.then(
+		    function (res) {
+				var firstGeoObject = res.geoObjects.get(0),
+				myMap = new ymaps.Map('map', {
+							center: firstGeoObject.geometry.getCoordinates(),
+							zoom: 12
+							});
+
+				myMap.controls
+				.add('zoomControl', { left: 5, top: 5 })
+				
+				res.geoObjects.options.set('preset', "twirl#lightblueDotIcon");
+			
+		        myMap.geoObjects.add(res.geoObjects);
+		    },
+		    function (err) {
+		        // обработка ошибки
+		    }
+		);
+};
+</script>
+<% end %>
+
+
 <div class="body clearfix" style="min-height: 500px;">
 		<div class="address">
 			<div class="address__top">
@@ -16,7 +46,9 @@
 				<p class="address__info"><b>Адрес:</b>&nbsp<%= @office.adress %></p>
 			</div>
 		<div class="address__map">
-			<div class="address__map-data"><%= @office.map.html_safe %></div>
+			<div class="address__map-data">
+				<%= render :partial => 'map' %>
+			</div>
 			
 		</div>
 		<div class="address__bottom">
