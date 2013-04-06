@@ -64,6 +64,9 @@ function show_popupresponse(popuptype)
 
   function valid_feedback(){
     var errors = 0
+    var emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
+    var intRegex = /^[0-9]+$/;
+    contact_field = $('#review_contact').val();
     if (!valid_item('review_author', 'Введите Ваше имя...')){
       errors++;
       $('#feedback_error').text('Представьтесь, пожалуйста:');
@@ -71,6 +74,11 @@ function show_popupresponse(popuptype)
     if (!valid_item('review_contact', 'e-mail или номер телефона')){
       errors++;
       $('#feedback_error').text('Заполните, пожалуйста, контактную информацию:');
+    }
+    else if (!contact_field.match(emailRegex) && !contact_field.match(intRegex)){
+      errors++;
+      $('#feedback_error').text('Необходимо указать e-mail или номер телефона');
+      $('#review_contact').addClass('error-border');
     }
     if(errors == 0) {
       $('#feedback_error').text('');
