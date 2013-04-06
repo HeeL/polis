@@ -244,7 +244,7 @@ a.up-link{z-index: 10; padding: 10px 0px 0px 34px; width: 64px; height: 42px; di
 .responses p{font: 16px/18px Tahoma; color: #797c80; }
 
 /* shadow */
-#shadow{background-color: #788943; position: fixed; opacity: 0.6; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=60); left: 0px; top: 0px; bottom: 0px; right: 0px; z-index: 50;}
+#shadow{background-color: #999999; position: fixed; opacity: 0.9; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=90); left: 0px; top: 0px; bottom: 0px; right: 0px; z-index: 50;}
 
 /* address */
 .address{padding: 0;}
