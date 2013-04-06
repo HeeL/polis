@@ -17,7 +17,6 @@ ActiveAdmin.register Office do
           f.inputs "Details" do
           f.input :title
           f.input :adress
-          f.input :map, :label => "Google map 948x400"
         end
         f.buttons
        end
@@ -26,9 +25,6 @@ ActiveAdmin.register Office do
               attributes_table do
                 row :title
                 row :adress
-                row :map do |office|
-                  office.map.html_safe 
-                end
               end
             end
     end
