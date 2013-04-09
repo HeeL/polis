@@ -101,6 +101,8 @@ function show_popupresponse(popuptype)
     if(!valid_feedback()) {
       return false;
     }
+    $('#new_review').attr('action', '/reviews');
+    $('#check').val('2');
     $('.popupresponse').hide();     
     
     $(".popupthankyou").css('left', parseInt(($('body').width() - $(".popupthankyou").width()) / 2) + 'px');

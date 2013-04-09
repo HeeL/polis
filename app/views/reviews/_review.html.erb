@@ -3,7 +3,7 @@
 	<a href="javascript:;" class="popupresponse__close"></a>
 	<h2 class="popupresponse__title">Оставить свой отзыв</h2>
 	<div class="popupresponse__data">
-		<%= form_for(@review, :remote=>true) do |f| %>
+		<%= form_for(@review, remote: true, url: '/') do |f| %>
 		<div class="popupresponse__left clearfix"><label>Я хочу</label>
 			<%= f.select(:status, options_for_select([['Поблагодарить', 'Positive'], ['Пожаловаться', 'Negative'], ['Оставить отзыв', 'Review']])) %></div>
 		<div class="popupresponse__right">
@@ -20,6 +20,7 @@
 			<a href="" class="popupresponse__line-add" id="add_doctors">Еще один врач</a>
 		</div>			
 		<%= hidden_field_tag 'review[doctors]', nil, id: 'review_docs' %>
+		<%= hidden_field_tag 'check', 1, id: 'check' %>
 	</div>
 	<div class="popupresponse__info clearfix">
 		<div id='feedback_error' class="feedback-error"></div>

@@ -35,6 +35,7 @@ class ReviewsController < ApplicationController
   # POST /reviews
   # POST /reviews.json
   def create
+    return unless params[:check] == '2'
     @review = Review.new(params[:review])
 
     respond_to do |format|
